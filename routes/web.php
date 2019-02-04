@@ -11,24 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ 'uses' => 'HomeController@index', 'as' => 'landing']);
 
-// Route::get('/admin', function(){
-//     echo "Hello Admin";
-// })->middleware('auth','admin');
- 
-// Route::get('/editor', function(){
-//     echo "Hello Editor";
-// })->middleware('auth','editor');
- 
-// Route::get('/staff', function(){
-//     echo "Hello Staff";
-// })->middleware('auth','staff');
 
-Auth::routes();
+Route::get('/dashboard', [ 'uses' => 'dashboardController@dashboard', 'as' => 'dashboard']);
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
+Route::get('/login', [ 'uses' => 'AuthController@login', 'as' => 'login']);
