@@ -22,4 +22,4 @@ Route::get('/logout',[ 'uses' => 'AuthController@logout', 'as' => 'logout']);
 
 // slider routes
 Route::get('/slider',[ 'uses' => 'SliderController@index', 'as' => 'slider']);
-Route::get('/slider/store',[ 'uses' => 'SliderController@store', 'as' => 'slider.store']);
+Route::post('/slider/store',[ 'uses' => 'SliderController@store', 'as' => 'slider.store']);

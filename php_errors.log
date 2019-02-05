@@ -1,0 +1,2 @@
+[05-Feb-2019 09:19:23 UTC] PHP Fatal error:  Trait 'App\SoftDeletes' not found in /home/ubuntu/workspace/app/Slider.php on line 9
+[05-Feb-2019 09:20:45 UTC] PHP Fatal error:  Trait 'Hrshadhin\Userstamps\UserstampsTrait' not found in /home/ubuntu/workspace/app/Slider.php on line 13
