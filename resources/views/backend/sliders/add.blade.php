@@ -156,12 +156,12 @@
                                                 <td>{{$slider->id}}</td>
                                                 <td>{{ $slider->title}}</td>
                                                 <td>{{ $slider->subtitle }}</td>
-                                                <td><img class="img-responsive" style="max-height: 200px;" src="{{url('uploads/'.$slider->image)}}" alt=""></td>
+                                                <td><img class="img-responsive" style="max-height: 100px; width: 100px;" src="{{url('uploads/'.$slider->image)}}" alt=""></td>
                                                 <td>{{ $slider->order }}</td>
                                                 <td><a href=""><button id="edit-modal" class="edit-modal btn btn-info">
                                                         <span class="glyphicon glyphicon-edit"></span> Edit
                                                     </button></a>
-                                                    <a href="" onclick="return confirm('Do you really want to delete This?')">
+                                                    <a href="{{ route('slider.delete', $slider->id) }}" onclick="return confirm('Do you really want to delete This?')">
                                                     <button class="delete-modal btn btn-danger">
                                                         <span class="glyphicon glyphicon-trash"></span> Delete
                                                     </button>

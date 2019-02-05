@@ -23,3 +23,4 @@ Route::get('/logout',[ 'uses' => 'AuthController@logout', 'as' => 'logout']);
 // slider routes
 Route::get('/slider',[ 'uses' => 'SliderController@index', 'as' => 'slider']);
 Route::post('/slider/store',[ 'uses' => 'SliderController@store', 'as' => 'slider.store']);
+Route::get( '/slider/delete/{id}', ['uses' => 'SliderController@delete', 'as' => 'slider.delete']);

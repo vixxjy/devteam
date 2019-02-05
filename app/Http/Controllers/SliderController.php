@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Slider;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Session;
 
 class SliderController extends Controller
 {
@@ -43,5 +44,14 @@ class SliderController extends Controller
         Slider::create($data);
 
         return redirect()->back()->with('success', 'New slider item created.');
+    }
+    
+    public function delete($id){
+        $slider = Slider::find($id);
+        $slider->delete();
+        
+        Session::flash('success', 'Slider was deleted successfully!');
+
+        return redirect()->back();
     }
 }
