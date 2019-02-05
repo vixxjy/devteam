@@ -41,11 +41,11 @@
                         <a href="#" uk-icon="icon: rss; ratio: .8"></a>
                     </li>
                     <li>
-                        <a href="#">Login</a>
+                        <a href="/signin">Login</a>
                     </li>
-                    <li>
-                        <a href="#">Register</a>
-                    </li>
+                    <!--<li>-->
+                    <!--    <a href="#">Register</a>-->
+                    <!--</li>-->
                 </ul>
             </div>
         </nav>

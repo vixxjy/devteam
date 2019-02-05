@@ -14,13 +14,13 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="dashboard.html">
+                    <a href="/dashboard">
                         <i class="ti-panel"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
+                    <a href="/slider">
                         <i class="ti-layers-alt"></i>
                         <p>Homepage Sliders</p>
                     </a>

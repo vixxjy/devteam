@@ -32,11 +32,26 @@
                                 <li><a href="#">Another notification</a></li>
                               </ul>
                         </li>
-						<li>
-                            <a href="#">
-								<i class="ti-settings"></i>
-								<p>Settings</p>
-                            </a>
+						<li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <p>
+                                        
+	                                   @if( Auth::check())
+	                                      <span class="ti-user"> {{ ucfirst(Auth::user()->username) }}</span>
+	                                   @endif
+										<b class="caret"></b>
+									</p>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <!--<li><a href="#">Profile</a></li>-->
+                                <li class="divider"></li>
+                                <li>
+                                        <a href="{{ route('logout') }}">
+                                            Logout
+                                        </a>
+                                </li>
+
+                              </ul>
                         </li>
                     </ul>
 
