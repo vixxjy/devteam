@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="staug/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>St Augustines College DU</title>
 </head>
 <body>
@@ -53,7 +53,7 @@
         <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
             <nav class="uk-navbar-container" uk-navbar style="position: relative; z-index: 980;">
                 <div class="uk-navbar-left">
-                    <a class="uk-navbar-item uk-logo" href="#"><img src="staug/img/logo.png" alt=""></a>
+                    <a class="uk-navbar-item uk-logo" href="#"><img src="img/logo.png" alt=""></a>
                     <ul class="uk-navbar-nav">
                         <li><a href="#" class="uk-flex-wrap">
                             <span class="name">St. Augustines College
@@ -67,25 +67,25 @@
                     <ul class="uk-navbar-nav nav1">
                         <li>
                             <a class="uk-text-center uk-flex-wrap" href="#">
-                                <img src="staug/img/admissions.png" alt="" class="nav-img">
+                                <img src="img/admissions.png" alt="" class="nav-img">
                                 <span class="uk-width-1-1@s">Admissions</span>
                             </a>
                         </li>
                         <li>
                             <a class="uk-text-center uk-flex-wrap" href="#">
-                                <img src="staug/img/portal.png" alt="" class="nav-img">
+                                <img src="img/portal.png" alt="" class="nav-img">
                                 <span class="uk-width-1-1@s">Portal</span>
                             </a>
                         </li>
                         <li>
                             <a class="uk-text-center uk-flex-wrap" href="#">
-                                <img src="staug/img/liturgy.png" alt="" class="nav-img">
+                                <img src="img/liturgy.png" alt="" class="nav-img">
                                 <span class="uk-width-1-1@s">Liturgy</span>
                             </a>
                         </li>
                         <li>
                             <a class="uk-text-center uk-flex-wrap" href="#">
-                                <img src="staug/img/school.png" alt="" class="nav-img">
+                                <img src="img/school.png" alt="" class="nav-img">
                                 <span class="uk-width-1-1@s">School Life</span>
                             </a>
                         </li>
@@ -105,13 +105,88 @@
                 </div>
             </nav>
         </div>
-    
-@yield('content')
+        <main class="body">
+            <div class="container uk-margin-medium-top uk-margin-medium-bottom">
+                <div class="uk-child-width-1-3@m uk-grid-collapse" uk-grid uk-lightbox="animation: fade">
+                    <div>
+                        <a class="uk-inline" href="img/DSC_0019edit.jpg" data-caption="Caption 1">
+                        <img src="img/DSC_0019edit.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="img/DSC_0034edit.jpg" data-caption="Caption 1">
+                        <img src="img/DSC_0034edit.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="img/DSC_0041edit.jpg" data-caption="Caption 1">
+                        <img src="img/DSC_0041edit.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="img/DSC_0044edit.jpg" data-caption="Caption 1">
+                        <img src="img/DSC_0044edit.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="img/DSC_0055edit.jpg" data-caption="Caption 1">
+                        <img src="img/DSC_0055edit.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="img/DSC_6727edit.jpg" data-caption="Caption 1">
+                        <img src="img/DSC_6727edit.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="img/DSC_6731edit.jpg" data-caption="Caption 1">
+                        <img src="img/DSC_6731edit.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="img/DSC_6749edit.jpg" data-caption="Caption 1">
+                        <img src="img/DSC_6749edit.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="img/DSC_7017edit.jpg" data-caption="Caption 1">
+                        <img src="img/DSC_7017edit.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="img/DSC_7037edit.jpg" data-caption="Caption 1">
+                        <img src="img/DSC_7037edit.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="img/DSC_7064edit.jpg" data-caption="Caption 1">
+                        <img src="img/DSC_7064edit.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="img/DSC_7069edit.jpg" data-caption="Caption 1">
+                        <img src="img/DSC_7069edit.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="img/DSC_7257edit.jpg" data-caption="Caption 1">
+                        <img src="img/DSC_7257edit.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="img/DSC_7318edit.jpg" data-caption="Caption 1">
+                        <img src="img/DSC_7318edit.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </main>
         <footer class="uk-flex uk-flex-middle uk-flex-center bg-black">
             <span>© 2019 St. Augustines's College Du. Jos South. All Rights Reserved.</span>
         </footer>
     </div>
-    <script src="staug/js/uikit.min.js"></script>
-    <script src="staug/js/uikit-icons.min.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
 </body>
 </html>

@@ -12,6 +12,12 @@
 */
 
 Route::get('/', [ 'uses' => 'HomeController@index', 'as' => 'landing']);
+Route::get('/aboutus', [ 'uses' => 'PagesController@aboutUs', 'as' => 'about']);
+Route::get('/academics', [ 'uses' => 'PagesController@academics', 'as' => 'academics']);
+Route::get('/admission', [ 'uses' => 'PagesController@admission', 'as' => 'admission']);
+Route::get('/contact', [ 'uses' => 'PagesController@contact', 'as' => 'contact']);
+Route::get('/gallery', [ 'uses' => 'PagesController@gallery', 'as' => 'gallery']);
+Route::get('/news', [ 'uses' => 'PagesController@news', 'as' => 'news']);
 
 
 Route::get('/dashboard', [ 'uses' => 'dashboardController@dashboard', 'as' => 'dashboard']);
