@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="staug/css/style.css">
+    <link rel="stylesheet" href="frontend/css/style.css">
     <title>St Augustines College DU</title>
 </head>
 <body>
@@ -53,7 +53,7 @@
         <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
             <nav class="uk-navbar-container" uk-navbar style="position: relative; z-index: 980;">
                 <div class="uk-navbar-left">
-                    <a class="uk-navbar-item uk-logo" href="#"><img src="staug/img/logo.png" alt=""></a>
+                    <a class="uk-navbar-item uk-logo" href="#"><img src="frontend/img/logo.png" alt=""></a>
                     <ul class="uk-navbar-nav">
                         <li><a href="#" class="uk-flex-wrap">
                             <span class="name">St. Augustines College
@@ -67,51 +67,51 @@
                     <ul class="uk-navbar-nav nav1">
                         <li>
                             <a class="uk-text-center uk-flex-wrap" href="#">
-                                <img src="staug/img/admissions.png" alt="" class="nav-img">
+                                <img src="frontend/img/admissions.png" alt="" class="nav-img">
                                 <span class="uk-width-1-1@s">Admissions</span>
                             </a>
                         </li>
                         <li>
                             <a class="uk-text-center uk-flex-wrap" href="#">
-                                <img src="staug/img/portal.png" alt="" class="nav-img">
+                                <img src="frontend/img/portal.png" alt="" class="nav-img">
                                 <span class="uk-width-1-1@s">Portal</span>
                             </a>
                         </li>
                         <li>
                             <a class="uk-text-center uk-flex-wrap" href="#">
-                                <img src="staug/img/liturgy.png" alt="" class="nav-img">
+                                <img src="frontend/img/liturgy.png" alt="" class="nav-img">
                                 <span class="uk-width-1-1@s">Liturgy</span>
                             </a>
                         </li>
                         <li>
                             <a class="uk-text-center uk-flex-wrap" href="#">
-                                <img src="staug/img/school.png" alt="" class="nav-img">
+                                <img src="frontend/img/school.png" alt="" class="nav-img">
                                 <span class="uk-width-1-1@s">School Life</span>
                             </a>
                         </li>
                     </ul>
 
                     <ul class="uk-navbar-nav nav2">
-                        <li><a href="index.html">home</a></li>
-                        <li><a href="about.html">about us</a></li>
-                        <li><a href="admission.html">admission</a></li>
-                        <li><a href="academics.html">academics</a></li>
+                        <li><a href="/">home</a></li>
+                        <li><a href="/aboutus">about us</a></li>
+                        <li><a href="/admission">admission</a></li>
+                        <li><a href="/academics">academics</a></li>
                         <!--<li><a href="#">prayer & liturgy</a></li>-->
-                        <li><a href="news.html">news</a></li>
-                        <li><a href="gallery.html">gallery</a></li>
-                        <li><a href="contact.html">contact us</a></li>
+                        <li><a href="/news">news</a></li>
+                        <li><a href="/gallery">gallery</a></li>
+                        <li><a href="/contact">contact us</a></li>
                     </ul>
 
                 </div>
             </nav>
         </div>
     
-@yield('content')
+        @yield('content')
         <footer class="uk-flex uk-flex-middle uk-flex-center bg-black">
             <span>© 2019 St. Augustines's College Du. Jos South. All Rights Reserved.</span>
         </footer>
     </div>
-    <script src="staug/js/uikit.min.js"></script>
-    <script src="staug/js/uikit-icons.min.js"></script>
+    <script src="frontend/js/uikit.min.js"></script>
+    <script src="frontend/js/uikit-icons.min.js"></script>
 </body>
 </html>
