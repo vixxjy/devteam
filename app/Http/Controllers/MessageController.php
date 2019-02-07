@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Message;
+use Session;
 
 class MessageController extends Controller
 {
@@ -30,5 +31,11 @@ class MessageController extends Controller
          $event->save();
         return redirect()->back()->with('success', 'Message Sent Succesfully.');
         
+    }
+    public function delete($id){
+        $event = Message::find($id);
+        $event->delete();
+        Session::flash('success', 'Message was deleted successfully!');
+        return redirect()->back();
     }
 }

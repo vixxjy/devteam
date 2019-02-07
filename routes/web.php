@@ -46,4 +46,5 @@ Route::post( '/slider/update/{id}', ['uses' => 'SliderController@update', 'as' =
 
 Route::post('/send/message', 'MessageController@store')->name('store-message');
 Route::get('/message', 'MessageController@index')->name('message');
+Route::get( '/message/delete/{id}', 'MessageController@delete')->name('message-delete');
 

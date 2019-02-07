@@ -50,7 +50,7 @@
                                                 <td>{{ $message->message }}</td>
                                                 <td>{{ date('F d, Y', strtotime($message->created_at)) }}</td>          
                                                 <td>
-                                                    <a href="" onclick="return confirm('Do you really want to delete This?')">
+                                                    <a href="{{ route('message-delete', $message->id) }}" onclick="return confirm('Do you really want to delete This?')">
                                                     <button class="delete-modal btn btn-danger">
                                                         <span class="glyphicon glyphicon-trash"></span> Delete
                                                     </button>
