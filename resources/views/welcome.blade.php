@@ -146,21 +146,25 @@
             <div class="uk-grid-collaps uk-margin-large-bottom" uk-grid>
                
                 <div class="uk-width-1-3@m uk-grid-collapse" uk-grid>
-                     @foreach($thoughtterms -> $thoughtterm()->orderBy('created_at', 'desc')->take(1)->get() as $thoughtterm)
+                     
                     <div class="uk-width-1-1@m red-card card">
+                    @foreach($thoughtterms as $thoughtterm)
                         <h1 class="thought uk-text-bold">THOUGHT OF <br>THE TERM</h1>
                         <h3 class="thought uk-text-bold">{{ $thoughtterm->title }}</h3>
                         <p>"{{ $thoughtterm->bible_quote }}"<br>{{ $thoughtterm->verse }}</p>
-                    </div>
                     @endforeach
-                     @foreach($thoughtweeks -> $thoughtweek()->orderBy('created_at', 'desc')->take(1)->get() as $thoughtweek)
+                    </div>
+                    
+                     
                     <div class="uk-width-1-1@m blue-card card">
+                    @foreach($thoughtweeks as $thoughtweek)
                         <h1 class="thought uk-text-bold">THEME OF<br>THE WEEK</h1>
                         <h3 class="thought uk-text-bold">{{ $thoughtweek->title }}</h3>
                         <p>"{{ $thoughtweek->bible_quote }}"<br>{{ $thoughtweek->verse }}</p>
+                    @endforeach
                     </div>
                 </div>
-                @endforeach
+                
                 <div class="vid-card uk-width-2-3@m uk-padding-remove">
                     <a class="uk-margin-bottom" uk-toggle="target: .hideme; animation: uk-animation-fade; queued: true; duration: 300">
                         <img class="uk-width-1-1@m hideme" src="frontend/img/whyUs.png" alt="">
@@ -170,11 +174,12 @@
                 </div>
             </div>
             <div class="n&e-updates container">
-                <h2 class="uk-child-width-1-1@s uk-text-center uk-text-bold col-black news">NEWS AND EVENT UPDATES</h2>
+                <h2 class="uk-child-width-1-1@s uk-text-center uk-text-bold col-black news">NEWS AND EVENT</h2>
                 <div class="uk-child-width-1-3@m uk-grid-match uk-grid-small uk-margin-large-bottom" uk-grid>
-                    @foreach($events as $event)
+                   
                     <div>
                         <div class="uk-card uk-card-default">
+                             @foreach($events as $event)
                             <div class="uk-card-media-top">
                                 <img class="img-fit:cover" src="{{url('images/'.$event->image)}}" alt="">
                             </div>
@@ -184,12 +189,10 @@
                                 <p>{{$event->description}}.</p>
                                 <a href="{{ route('more-event', $event->id) }}" class="uk-button bg-sec col-white">Read More</a>
                             </div>
+                             @endforeach
                         </div>
                     </div>
     
-                    @endforeach
-                    
-                    
                 </div>
             </div>
 
