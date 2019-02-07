@@ -30,3 +30,17 @@ Route::get('/logout',[ 'uses' => 'AuthController@logout', 'as' => 'logout']);
 Route::get('/slider',[ 'uses' => 'SliderController@index', 'as' => 'slider']);
 Route::post('/slider/store',[ 'uses' => 'SliderController@store', 'as' => 'slider.store']);
 Route::get( '/slider/delete/{id}', ['uses' => 'SliderController@delete', 'as' => 'slider.delete']);
+
+// Thought of the week routes
+Route::get('/Thoughtofweek',[ 'uses' => 'ThoughtweekController@index', 'as' => 'Thoughtweek']);
+Route::post('/Thoughtofweek/store',[ 'uses' => 'ThoughtweekController@store', 'as' => 'Thoughtweek.store']);
+Route::get( '/Thoughtofweek/edit/{id}', ['uses' => 'ThoughtweekController@edit', 'as' => 'thoughtweek.edit']);
+Route::post( '/Thoughtofweek/update/{id}', ['uses' => 'ThoughtweekController@update', 'as' => 'thoughtweek.update']);
+Route::get( '/Thoughtofweek/delete/{id}', ['uses' => 'ThoughtweekController@delete', 'as' => 'thoughtweek.delete']);
+
+// Thought of the term routes
+Route::get('/Thoughtofterm',[ 'uses' => 'ThoughttermController@index', 'as' => 'Thoughtterm']);
+Route::post('/Thoughtofterm/store',[ 'uses' => 'ThoughttermController@store', 'as' => 'Thoughtterm.store']);
+Route::get( '/Thoughtofterm/edit/{id}', ['uses' => 'ThoughttermController@edit', 'as' => 'thoughtterm.edit']);
+Route::post( '/Thoughtofterm/update/{id}', ['uses' => 'ThoughttermController@update', 'as' => 'thoughtterm.update']);
+Route::get( '/Thoughtofterm/delete/{id}', ['uses' => 'ThoughttermController@delete', 'as' => 'thoughtterm.delete']);
