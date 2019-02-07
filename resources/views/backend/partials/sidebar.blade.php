@@ -28,7 +28,7 @@
                 <li>
                     <a href="#">
                         <i class="ti-view-list-alt"></i>
-                        <p>Thought of the month</p>
+                        <p>Thought of the term</p>
                     </a>
                 </li>
                 <li>
@@ -57,7 +57,7 @@
                 </li>
                  <li>
                     <a href="notifications.html">
-                        <i class="ti-image"></i>
+                        <i class="ti-upload"></i>
                         <p>Pdf Uploads</p>
                     </a>
                 </li>

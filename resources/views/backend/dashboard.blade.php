@@ -26,12 +26,12 @@
                                 <div class="row">
                                     <div class="col-xs-5">
                                         <div class="icon-big icon-warning text-center">
-                                            <i class="ti-server"></i>
+                                            <i class="ti-layers-alt"></i>
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Capacity</p>
+                                            <p>Sliders</p>
                                             105GB
                                         </div>
                                     </div>
@@ -56,7 +56,7 @@
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Revenue</p>
+                                            <p>Thought of the Term</p>
                                             $1,345
                                         </div>
                                     </div>
@@ -81,7 +81,7 @@
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Errors</p>
+                                            <p>Theme of the week</p>
                                             23
                                         </div>
                                     </div>
@@ -101,12 +101,12 @@
                                 <div class="row">
                                     <div class="col-xs-5">
                                         <div class="icon-big icon-info text-center">
-                                            <i class="ti-twitter-alt"></i>
+                                            <i class="ti-user"></i>
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Followers</p>
+                                            <p>Users</p>
                                             +45
                                         </div>
                                     </div>

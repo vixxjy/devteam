@@ -13,7 +13,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="ti-panel"></i>
+                                <i class="ti-view-list"></i>
                                 <p class="notification">5</p>
 								<p>Applications</p>
                             </a>
@@ -25,13 +25,13 @@
 									<p>Notifications</p>
 									<b class="caret"></b>
                               </a>
-                              <!--<ul class="dropdown-menu">-->
-                              <!--  <li><a href="#">Notification 1</a></li>-->
-                              <!--  <li><a href="#">Notification 2</a></li>-->
-                              <!--  <li><a href="#">Notification 3</a></li>-->
-                              <!--  <li><a href="#">Notification 4</a></li>-->
-                              <!--  <li><a href="#">Another notification</a></li>-->
-                              <!--</ul>-->
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Contact Us</a></li>
+                                <!--<li><a href="#">Notification 2</a></li>-->
+                                <!--<li><a href="#">Notification 3</a></li>-->
+                                <!--<li><a href="#">Notification 4</a></li>-->
+                                <!--<li><a href="#">Another notification</a></li>-->
+                              </ul>
                         </li>
 						<li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
