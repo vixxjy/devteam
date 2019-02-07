@@ -3,6 +3,7 @@
 @section('content')
         <main class="body">
             <div class="container uk-margin-medium-top uk-margin-medium-bottom">
+            
                 <div>
                         <h3 class="uk-article-title">OUR ADMISSION PROCESS</h3>
                         <p>Welcome to St. Augustine’s College Du. It is our hope that you will want to learn more
@@ -28,9 +29,62 @@
                         <li>Must have passed the school’s entrance examination with a minimum of 50%.</li>
                     </ul>
                     </div>
-                <h3>Please <a class="uk-link font-600" href="contact">contact us</a> if you have any questions about being
-                    part
-                    of us.</h3>
+        <h3>Please <a class="uk-link font-600" href="contact">contact us</a> if you have any questions about being part    of us.</h3>
+        <section class="contact-for mt-4">
+        @if($errors->any())
+                        <div class="alert alert-danger">
+                        @foreach($errors->all() as $error)
+                            <p>{{ $error }}</p>
+                        @endforeach()
+                        </div>
+                    @endif
+                        @if ($message = Session::get('success'))
+                        <div class="alert alert-success">
+                            <p><b>{{ $message }}</b></p>
+                       </div>
+            @endif
+<div class="row">
+    <div class="col-md-6">
+    <form action="{{ route('store-message')}}" method="post">
+            {{csrf_field()}}
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group m-2">
+                        <label for="name">Your Name<span class="text-danger">*</span></label>
+                        <input autofocus type="text" class="form-control border-input p-2" name="name" placeholder="Name" value="{{ old('name') }}" required minlength="5" maxlength="255">
+                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group  m-2">
+                        <label>Your Email<span class="text-danger">*</span></label>
+                        <input type="email" class="form-control border-input p-3" name="email" placeholder="Email Address" value="{{ old('email') }}" required >
+                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group m-2 ">
+                        <label for="subtitle">Your Message<span class="text-danger">*</span></label>
+                        
+                        <textarea  type="text"  class="form-control border-input p-3" name="message" placeholder="Message" value="{{ old('message') }}" required minlength="5" maxlength="255"></textarea>
+                        <span class="text-danger">{{ $errors->first('message') }}</span>
+                    </div>
+                </div>
+                
             </div>
-        </main>
+
+            <div class="m-3">
+                <button type="submit" class="btn btn-info btn-fill btn-wd">Send Message</button>
+            </div>
+            <div class="clearfix"></div>
+        </form>
+    </div>
+    <div class="col-md-6"></div>
+ </section>
+  </div>
+</main>
 @endsection

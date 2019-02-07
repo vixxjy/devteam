@@ -38,9 +38,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="icons.html">
+                    <a href="/event">
                         <i class="ti-pencil-alt2"></i>
                         <p>News/Events</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/message">
+                        <i class="ti-pencil-alt2"></i>
+                        <p>Messages</p>
                     </a>
                 </li>
                 <li>
