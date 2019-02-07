@@ -26,7 +26,7 @@
             <div class="container-fluid">
                 <div class="row">
                
-                    <div class="col-md-10 col-md-offset-1">
+                    <div class="col-md-12">
                         <div class="card p-5">
                             <div class="header">
                                 <h4 class="title">Add Event/News</h4>

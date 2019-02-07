@@ -43,12 +43,12 @@
                         <p>News/Events</p>
                     </a>
                 </li>
-                <li>
-                    <a href="/message">
-                        <i class="ti-pencil-alt2"></i>
-                        <p>Messages</p>
-                    </a>
-                </li>
+                <!--<li>-->
+                <!--    <a href="/message">-->
+                <!--        <i class="ti-pencil-alt2"></i>-->
+                <!--        <p>Messages</p>-->
+                <!--    </a>-->
+                <!--</li>-->
                 <li>
                     <a href="maps.html">
                         <i class="ti-video-camera"></i>

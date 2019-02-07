@@ -144,18 +144,23 @@
                 </div>
             </div>
             <div class="uk-grid-collaps uk-margin-large-bottom" uk-grid>
+               
                 <div class="uk-width-1-3@m uk-grid-collapse" uk-grid>
+                     @foreach($thoughtterms -> $thoughtterm()->orderBy('created_at', 'desc')->take(1)->get() as $thoughtterm)
                     <div class="uk-width-1-1@m red-card card">
                         <h1 class="thought uk-text-bold">THOUGHT OF <br>THE TERM</h1>
-                        <p>"Above all else, let Love be Sincere, Hate what is Evil; Hold Tightly to what is Good!"<br>
-                            Romans 12:9</p>
+                        <h3 class="thought uk-text-bold">{{ $thoughtterm->title }}</h3>
+                        <p>"{{ $thoughtterm->bible_quote }}"<br>{{ $thoughtterm->verse }}</p>
                     </div>
+                    @endforeach
+                     @foreach($thoughtweeks -> $thoughtweek()->orderBy('created_at', 'desc')->take(1)->get() as $thoughtweek)
                     <div class="uk-width-1-1@m blue-card card">
                         <h1 class="thought uk-text-bold">THEME OF<br>THE WEEK</h1>
-                        <p>Be Fruitful and Increase<br>
-                            (Gen 1:28)</p>
+                        <h3 class="thought uk-text-bold">{{ $thoughtweek->title }}</h3>
+                        <p>"{{ $thoughtweek->bible_quote }}"<br>{{ $thoughtweek->verse }}</p>
                     </div>
                 </div>
+                @endforeach
                 <div class="vid-card uk-width-2-3@m uk-padding-remove">
                     <a class="uk-margin-bottom" uk-toggle="target: .hideme; animation: uk-animation-fade; queued: true; duration: 300">
                         <img class="uk-width-1-1@m hideme" src="frontend/img/whyUs.png" alt="">

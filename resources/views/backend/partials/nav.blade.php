@@ -26,7 +26,7 @@
 									<b class="caret"></b>
                               </a>
                               <ul class="dropdown-menu">
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="/message">Contact Us</a></li>
                                 <!--<li><a href="#">Notification 2</a></li>-->
                                 <!--<li><a href="#">Notification 3</a></li>-->
                                 <!--<li><a href="#">Notification 4</a></li>-->
