@@ -72,7 +72,7 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="image">Image<span class="text-danger"> [1900 X 1200 min size and max 2MB] *</span></label>
+                                                <label for="image">Image<span class="text-danger"> [1900 X 1200 min size and max 1MB] *</span></label>
                                                 <input  type="file" class="form-control border-input" accept=".jpeg, .jpg, .png" name="image" placeholder="image" required>
                                                 <span class="text-danger">{{ $errors->first('image') }}</span>
                                             </div>
