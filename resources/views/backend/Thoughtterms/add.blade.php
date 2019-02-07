@@ -26,7 +26,7 @@
             <div class="container-fluid">
                 <div class="row">
                
-                    <div class="col-md-10 col-md-offset-1">
+                    <div class="col-md-12">
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Add Thought of the Term</h4>
@@ -47,14 +47,14 @@
                                 <form action="{{ route('Thoughtterm.store')}}" method="post" enctype="multipart/form-data">
                                     {{csrf_field()}}
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="title">Title<span class="text-danger">*</span></label>
                                                 <input autofocus type="text" class="form-control border-input" name="title" placeholder="title" value="{{ old('title') }}" required minlength="5" maxlength="255">
                                                 <span class="text-danger">{{ $errors->first('title') }}</span>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-8">
                                             <div class="form-group">
                                                 <label for="subtitle">Bible Quote<span class="text-danger">*</span></label>
                                                 <input  type="text" class="form-control border-input" name="bible_quote" placeholder="bible_quote" value="{{ old('bible_quote') }}" required minlength="5" maxlength="255">

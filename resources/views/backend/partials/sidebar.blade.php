@@ -26,13 +26,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/Thoughtofterm">
                         <i class="ti-view-list-alt"></i>
                         <p>Thought of the term</p>
                     </a>
                 </li>
                 <li>
-                    <a href="typography.html">
+                    <a href="/Thoughtofweek">
                         <i class="ti-text"></i>
                         <p>Theme of the week</p>
                     </a>
@@ -50,25 +50,25 @@
                 <!--    </a>-->
                 <!--</li>-->
                 <li>
-                    <a href="maps.html">
+                    <a href="#">
                         <i class="ti-video-camera"></i>
                         <p>Youtube Video</p>
                     </a>
                 </li>
                 <li>
-                    <a href="notifications.html">
+                    <a href="#">
                         <i class="ti-image"></i>
                         <p>Gallery</p>
                     </a>
                 </li>
                  <li>
-                    <a href="notifications.html">
+                    <a href="#">
                         <i class="ti-upload"></i>
                         <p>Pdf Uploads</p>
                     </a>
                 </li>
 				<li class="active-pro">
-                    <a href="upgrade.html">
+                    <a href="#">
                         <i class="ti-user"></i>
                         <p>Users</p>
                     </a>
