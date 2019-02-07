@@ -20,6 +20,7 @@ Route::get('/gallery', [ 'uses' => 'PagesController@gallery', 'as' => 'gallery']
 Route::get('/news', [ 'uses' => 'PagesController@news', 'as' => 'news']);
 
 
+
 Route::get('/dashboard', [ 'uses' => 'dashboardController@dashboard', 'as' => 'dashboard']);
 
 Route::get('/signin', [ 'uses' => 'AuthController@login', 'as' => 'login']);
@@ -31,6 +32,7 @@ Route::get('/slider',[ 'uses' => 'SliderController@index', 'as' => 'slider']);
 Route::post('/slider/store',[ 'uses' => 'SliderController@store', 'as' => 'slider.store']);
 Route::get( '/slider/delete/{id}', ['uses' => 'SliderController@delete', 'as' => 'slider.delete']);
 
+<<<<<<< HEAD
 // Thought of the week routes
 Route::get('/Thoughtofweek',[ 'uses' => 'ThoughtweekController@index', 'as' => 'Thoughtweek']);
 Route::post('/Thoughtofweek/store',[ 'uses' => 'ThoughtweekController@store', 'as' => 'Thoughtweek.store']);
@@ -44,3 +46,21 @@ Route::post('/Thoughtofterm/store',[ 'uses' => 'ThoughttermController@store', 'a
 Route::get( '/Thoughtofterm/edit/{id}', ['uses' => 'ThoughttermController@edit', 'as' => 'thoughtterm.edit']);
 Route::post( '/Thoughtofterm/update/{id}', ['uses' => 'ThoughttermController@update', 'as' => 'thoughtterm.update']);
 Route::get( '/Thoughtofterm/delete/{id}', ['uses' => 'ThoughttermController@delete', 'as' => 'thoughtterm.delete']);
+=======
+
+Route::get('/event', 'EventsController@index')->name('events');
+Route::post('/event', 'EventsController@store')->name('event-post');
+Route::post('/event', 'EventsController@store')->name('event-post');
+Route::get( '/event/delete/{id}', 'EventsController@delete')->name('event-delete');
+Route::get( '/event/edit/{id}', 'EventsController@edit')->name('event-edit');
+Route::post( '/event/update/{id}', 'EventsController@update')->name('event-update');
+Route::get( 'event/read-more/{id}', 'PagesController@moreEvent')->name('more-event');
+
+Route::get('/slider/edit/{id}', ['uses' => 'SliderController@edit', 'as' => 'slider.edit']);
+Route::post( '/slider/update/{id}', ['uses' => 'SliderController@update', 'as' => 'slider.update']);
+
+Route::post('/send/message', 'MessageController@store')->name('store-message');
+Route::get('/message', 'MessageController@index')->name('message');
+Route::get( '/message/delete/{id}', 'MessageController@delete')->name('message-delete');
+
+>>>>>>> 6331c2338af7d9cd46e818a1a110e622a3c7dace

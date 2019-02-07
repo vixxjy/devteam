@@ -28,7 +28,7 @@
                 <li>
                     <a href="#">
                         <i class="ti-view-list-alt"></i>
-                        <p>Thought of the month</p>
+                        <p>Thought of the term</p>
                     </a>
                 </li>
                 <li>
@@ -38,9 +38,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="icons.html">
+                    <a href="/event">
                         <i class="ti-pencil-alt2"></i>
                         <p>News/Events</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/message">
+                        <i class="ti-pencil-alt2"></i>
+                        <p>Messages</p>
                     </a>
                 </li>
                 <li>
@@ -55,12 +61,18 @@
                         <p>Gallery</p>
                     </a>
                 </li>
-				<!--<li class="active-pro">-->
-    <!--                <a href="upgrade.html">-->
-    <!--                    <i class="ti-export"></i>-->
-    <!--                    <p>Upgrade to PRO</p>-->
-    <!--                </a>-->
-    <!--            </li>-->
+                 <li>
+                    <a href="notifications.html">
+                        <i class="ti-upload"></i>
+                        <p>Pdf Uploads</p>
+                    </a>
+                </li>
+				<li class="active-pro">
+                    <a href="upgrade.html">
+                        <i class="ti-user"></i>
+                        <p>Users</p>
+                    </a>
+                </li>
             </ul>
     	</div>
     </div>

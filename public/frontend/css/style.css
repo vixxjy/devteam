@@ -6711,6 +6711,11 @@ footer {
 .col-black {
   color: #171717; }
 
+.uk-card-media-top{
+  height: 300px;
+
+}
+
 .bg-white {
   background: #ffffff; }
 
