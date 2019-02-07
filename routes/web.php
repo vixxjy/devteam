@@ -19,8 +19,6 @@ Route::get('/contact', [ 'uses' => 'PagesController@contact', 'as' => 'contact']
 Route::get('/gallery', [ 'uses' => 'PagesController@gallery', 'as' => 'gallery']);
 Route::get('/news', [ 'uses' => 'PagesController@news', 'as' => 'news']);
 
-
-
 Route::get('/dashboard', [ 'uses' => 'dashboardController@dashboard', 'as' => 'dashboard']);
 
 Route::get('/signin', [ 'uses' => 'AuthController@login', 'as' => 'login']);
@@ -47,6 +45,7 @@ Route::get( 'event/read-more/{id}', 'PagesController@moreEvent')->name('more-eve
 Route::post('/send/message', 'MessageController@store')->name('store-message');
 Route::get('/message', 'MessageController@index')->name('message');
 Route::get( '/message/delete/{id}', 'MessageController@delete')->name('message-delete');
+
 
 // Thought of the week routes
 Route::get('/Thoughtofweek',[ 'uses' => 'ThoughtweekController@index', 'as' => 'Thoughtweek']);
