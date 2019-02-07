@@ -55,12 +55,18 @@
                         <p>Gallery</p>
                     </a>
                 </li>
-				<!--<li class="active-pro">-->
-    <!--                <a href="upgrade.html">-->
-    <!--                    <i class="ti-export"></i>-->
-    <!--                    <p>Upgrade to PRO</p>-->
-    <!--                </a>-->
-    <!--            </li>-->
+                 <li>
+                    <a href="notifications.html">
+                        <i class="ti-image"></i>
+                        <p>Pdf Uploads</p>
+                    </a>
+                </li>
+				<li class="active-pro">
+                    <a href="upgrade.html">
+                        <i class="ti-user"></i>
+                        <p>Users</p>
+                    </a>
+                </li>
             </ul>
     	</div>
     </div>

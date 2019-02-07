@@ -22,7 +22,7 @@
                     <!--</ul>-->
                 </nav>
                 <div class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="#">Victor Smilez</a>
+                    &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="#">Smilez's team</a>
                 </div>
             </div>
         </footer>

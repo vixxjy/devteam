@@ -30,3 +30,5 @@ Route::get('/logout',[ 'uses' => 'AuthController@logout', 'as' => 'logout']);
 Route::get('/slider',[ 'uses' => 'SliderController@index', 'as' => 'slider']);
 Route::post('/slider/store',[ 'uses' => 'SliderController@store', 'as' => 'slider.store']);
 Route::get( '/slider/delete/{id}', ['uses' => 'SliderController@delete', 'as' => 'slider.delete']);
+Route::get('/slider/edit/{id}', ['uses' => 'SliderController@edit', 'as' => 'slider.edit']);
+Route::post( '/slider/update/{id}', ['uses' => 'SliderController@update', 'as' => 'slider.update']);
