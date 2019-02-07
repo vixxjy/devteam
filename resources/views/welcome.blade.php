@@ -125,59 +125,25 @@
             </div>
             <div class="n&e-updates container">
                 <h2 class="uk-child-width-1-1@s uk-text-center uk-text-bold col-black news">NEWS AND EVENT UPDATES</h2>
-                <div class="uk-child-width-1-4@m uk-grid-match uk-grid-small uk-margin-large-bottom" uk-grid>
+                <div class="uk-child-width-1-3@m uk-grid-match uk-grid-small uk-margin-large-bottom" uk-grid>
+                    @foreach($events as $event)
                     <div>
                         <div class="uk-card uk-card-default">
                             <div class="uk-card-media-top">
-                                <img src="frontend/img/news1.png" alt="">
+                                <img class="img-fit:cover" src="{{url('images/'.$event->image)}}" alt="">
                             </div>
                             <div class="uk-card-body uk-padding-small">
-                                <h6 class="font-600">Cultural Day / Ground Breaking</h6>
-                                <time datetime="2016-04-01T19:00">April 01, 2016</time>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                <a href="#" class="uk-button bg-sec col-white">Read More</a>
+                                <h6 class="font-600">{{$event->title}}</h6>
+                                <time datetime="2016-04-01T19:00">{{ date('F d, Y', strtotime($event->created_at)) }}</time>
+                                <p>{{$event->description}}.</p>
+                                <a href="{{ route('more-event', $event->id) }}" class="uk-button bg-sec col-white">Read More</a>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="uk-card uk-card-default">
-                            <div class="uk-card-media-top">
-                                <img src="frontend/img/news2.png" alt="">
-                            </div>
-                            <div class="uk-card-body uk-padding-small">
-                                <h6 class="font-600">Interview of Prospective Students</h6>
-                                <time datetime="2016-04-01T19:00">April 01, 2016</time>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                <a href="#" class="uk-button bg-sec col-white">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="uk-card uk-card-default">
-                            <div class="uk-card-media-top">
-                                <img src="frontend/img/news3.png" alt="">
-                            </div>
-                            <div class="uk-card-body uk-padding-small">
-                                <h6 class="font-600">Combined with a handful</h6>
-                                <time datetime="2016-04-01T19:00">April 01, 2016</time>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                <a href="#" class="uk-button bg-sec col-white">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="uk-card uk-card-default">
-                            <div class="uk-card-media-top">
-                                <img src="frontend/img/news4.png" alt="">
-                            </div>
-                            <div class="uk-card-body uk-padding-small">
-                                <h6 class="font-600">Combined with a handful</h6>
-                                <time datetime="2016-04-01T19:00">April 01, 2016</time>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                <a href="#" class="uk-button bg-sec col-white">Read More</a>
-                            </div>
-                        </div>
-                    </div>
+    
+                    @endforeach
+                    
+                    
                 </div>
             </div>
 

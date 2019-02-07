@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Event;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        $events = Event::orderBy('id', 'DESC')->get();
+        return view('welcome')->with('events', $events);
     } 
 }

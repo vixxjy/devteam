@@ -20,6 +20,7 @@ Route::get('/gallery', [ 'uses' => 'PagesController@gallery', 'as' => 'gallery']
 Route::get('/news', [ 'uses' => 'PagesController@news', 'as' => 'news']);
 
 
+
 Route::get('/dashboard', [ 'uses' => 'dashboardController@dashboard', 'as' => 'dashboard']);
 
 Route::get('/signin', [ 'uses' => 'AuthController@login', 'as' => 'login']);
@@ -30,3 +31,10 @@ Route::get('/logout',[ 'uses' => 'AuthController@logout', 'as' => 'logout']);
 Route::get('/slider',[ 'uses' => 'SliderController@index', 'as' => 'slider']);
 Route::post('/slider/store',[ 'uses' => 'SliderController@store', 'as' => 'slider.store']);
 Route::get( '/slider/delete/{id}', ['uses' => 'SliderController@delete', 'as' => 'slider.delete']);
+
+Route::get('/event', 'EventsController@index')->name('events');
+Route::post('/event', 'EventsController@store')->name('event-post');
+Route::get( '/event/{id}', 'EventsController@delete')->name('event-delete');
+Route::get( '/edit/{id}', 'EventsController@edit')->name('event-edit');
+Route::post( '/edit/upadte/{id}', 'EventsController@update')->name('event-update');
+Route::get( '/read-more/{id}', 'PagesController@moreEvent')->name('more-event');
