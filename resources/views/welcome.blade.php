@@ -5,26 +5,67 @@
         <div class="uk-position-relative" uk-slideshow="animation: fade; autoplay: true">
 
             <ul class="uk-slideshow-items">
+                	@foreach($sliders as $slider)
+					@php
+						$styleValue = 1;
+						if($loop->iteration%3 == 0){
+							$styleValue = 3;
+						}
+						else if($loop->iteration%2 == 0){
+							$styleValue = 2;
+						}
+						else{
+						  $styleValue = 1;
+						}
+
+					@endphp
+				
+				@if($styleValue == 1)
                 <li>
-                    <img src="frontend/img/slide4.jpg" alt="" uk-cover>
+                    <img src="{{url('uploads/'.$slider->image)}}" alt="" uk-cover>
                 </li>
+                @elseif($styleValue == 2)
                 <li>
-                    <img src="frontend/img/slide3.jpg" alt="" uk-cover>
+                    <img src="{{url('uploads/'.$slider->image)}}" alt="" uk-cover>
                 </li>
+                @elseif($styleValue == 3)
                 <li>
-                    <img src="frontend/img/slide2.jpg" alt="" uk-cover>
+                    <img src="{{url('uploads/'.$slider->image)}}" alt="" uk-cover>
                 </li>
+                @else
                 <li>
-                    <img src="frontend/img/slide1.jpg" alt="" uk-cover>
+                    <img src="{{url('uploads/'.$slider->image)}}" alt="" uk-cover>
                 </li>
+                @endif
+				@endforeach
             </ul>
 
             <div class="uk-position-bottom-center uk-position-small">
                 <ul class="uk-thumbnav">
-                    <li uk-slideshow-item="0"><a href="#"><img src="frontend/img/slide4.jpg" width="100" alt=""></a></li>
-                    <li uk-slideshow-item="1"><a href="#"><img src="frontend/img/slide3.jpg" width="100" alt=""></a></li>
-                    <li uk-slideshow-item="2"><a href="#"><img src="frontend/img/slide2.jpg" width="100" alt=""></a></li>
-                    <li uk-slideshow-item="3"><a href="#"><img src="frontend/img/slide1.jpg" width="100" alt=""></a></li>
+                    @foreach($sliders as $slider)
+					@php
+						$styleValue = 1;
+						if($loop->iteration%3 == 0){
+							$styleValue = 3;
+						}
+						else if($loop->iteration%2 == 0){
+							$styleValue = 2;
+						}
+						else{
+						  $styleValue = 1;
+						}
+
+					@endphp
+                    @if($styleValue == 1)
+                    <li uk-slideshow-item="0"><a href="#"><img src="{{url('uploads/'.$slider->image)}}" width="100" alt=""></a></li>
+                    @elseif($styleValue == 2)
+                    <li uk-slideshow-item="1"><a href="#"><img src="{{url('uploads/'.$slider->image)}}" width="100" alt=""></a></li>
+                    @elseif($styleValue == 3)
+                    <li uk-slideshow-item="2"><a href="#"><img src="{{url('uploads/'.$slider->image)}}" width="100" alt=""></a></li>
+                    @else
+                    <li uk-slideshow-item="3"><a href="#"><img src="{{url('uploads/'.$slider->image)}}" width="100" alt=""></a></li>
+                    @endif
+                    @endforeach
                 </ul>
                 <a class="uk-position-center-left uk-position-small uk-hidden-hover trans-out-100%" href="#"
                    uk-slidenav-previous uk-slideshow-item="previous"></a>
@@ -54,7 +95,7 @@
                     <span>HISTORY</span>
                     </div>
                 </a>
-                <a href="#">
+                <a href="/gallery">
                     <div class="uk-card">
                     <img src="frontend/img/gallery.png" alt="gallery">
                     <span>GALLERY</span>

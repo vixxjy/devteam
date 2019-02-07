@@ -26,7 +26,7 @@
             <div class="container-fluid">
                 <div class="row">
                
-                    <div class="col-md-10 col-md-offset-1">
+                    <div class="col-md-12">
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Add Slider Image</h4>
@@ -61,18 +61,13 @@
                                                 <span class="text-danger">{{ $errors->first('subtitle') }}</span>
                                             </div>
                                         </div>
-                                        <!--<div class="col-md-4">-->
-                                        <!--    <div class="form-group">-->
-                                        <!--        <label for="exampleInputEmail1">Email address</label>-->
-                                        <!--        <input type="email" class="form-control border-input" placeholder="Email">-->
-                                        <!--    </div>-->
-                                        <!--</div>-->
+                      
                                     </div>
 
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="image">Image<span class="text-danger"> [1900 X 1200 min size and max 2MB] *</span></label>
+                                                <label for="image">Image<span class="text-danger"> [1200 X 400 min size and max 1MB] *</span></label>
                                                 <input  type="file" class="form-control border-input" accept=".jpeg, .jpg, .png" name="image" placeholder="image" required>
                                                 <span class="text-danger">{{ $errors->first('image') }}</span>
                                             </div>
@@ -86,47 +81,6 @@
                                         </div>
                                     </div>
 
-                                    <!--<div class="row">-->
-                                    <!--    <div class="col-md-12">-->
-                                    <!--        <div class="form-group">-->
-                                    <!--            <label>Address</label>-->
-                                    <!--            <input type="text" class="form-control border-input" placeholder="Home Address" value="Melbourne, Australia">-->
-                                    <!--        </div>-->
-                                    <!--    </div>-->
-                                    <!--</div>-->
-
-                                    <!--<div class="row">-->
-                                    <!--    <div class="col-md-4">-->
-                                    <!--        <div class="form-group">-->
-                                    <!--            <label>City</label>-->
-                                    <!--            <input type="text" class="form-control border-input" placeholder="City" value="Melbourne">-->
-                                    <!--        </div>-->
-                                    <!--    </div>-->
-                                    <!--    <div class="col-md-4">-->
-                                    <!--        <div class="form-group">-->
-                                    <!--            <label>Country</label>-->
-                                    <!--            <input type="text" class="form-control border-input" placeholder="Country" value="Australia">-->
-                                    <!--        </div>-->
-                                    <!--    </div>-->
-                                    <!--    <div class="col-md-4">-->
-                                    <!--        <div class="form-group">-->
-                                    <!--            <label>Postal Code</label>-->
-                                    <!--            <input type="number" class="form-control border-input" placeholder="ZIP Code">-->
-                                    <!--        </div>-->
-                                    <!--    </div>-->
-                                    <!--</div>-->
-
-<!--                                    <div class="row">-->
-<!--                                        <div class="col-md-12">-->
-<!--                                            <div class="form-group">-->
-<!--                                                <label>About Me</label>-->
-<!--                                                <textarea rows="5" class="form-control border-input" placeholder="Here can be your description" value="Mike">Oh so, your weak rhyme-->
-<!--You doubt I'll bother, reading into it-->
-<!--I'll probably won't, left to my own devices-->
-<!--But that's the difference in our opinions.</textarea>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
                                     <div class="text-center">
                                         <a href="/dashboard" class="btn btn-default">Cancel</a>
                                         <button type="submit" class="btn btn-info btn-fill btn-wd">Add Slider</button>
@@ -158,7 +112,7 @@
                                                 <td>{{ $slider->subtitle }}</td>
                                                 <td><img class="img-responsive" style="max-height: 100px; width: 100px;" src="{{url('uploads/'.$slider->image)}}" alt=""></td>
                                                 <td>{{ $slider->order }}</td>
-                                                <td><a href=""><button id="edit-modal" class="edit-modal btn btn-info">
+                                                <td><a href="{{ route('slider.edit', $slider->id) }}"><button id="edit-modal" class="edit-modal btn btn-info">
                                                         <span class="glyphicon glyphicon-edit"></span> Edit
                                                     </button></a>
                                                     <a href="{{ route('slider.delete', $slider->id) }}" onclick="return confirm('Do you really want to delete This?')">
