@@ -1,26 +1,130 @@
-@extends('layouts.main')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="frontend/css/style.css">
+    <title>St Augustines College DU</title>
+</head>
+<body>
+<div class="wrapper uk-container uk-container-large">
+        <nav id="topbar" class="uk-navbar-container pl-pr-container" uk-navbar>
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="#"><span class="mr-4px"
+                                          uk-icon="icon: receiver; ratio: .8"></span>+98 558 547 580</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="mr-4px"
+                                          uk-icon="icon: mail; ratio: .8"></span>education@info.com</a>
+                    </li>
+                </ul>
 
-@section('content')
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="#" uk-icon="icon: facebook; ratio: .8"></a>
+                    </li>
+                    <li>
+                        <a href="#" uk-icon="icon: twitter; ratio: .8"></a>
+                    </li>
+                    <li>
+                        <a href="#" uk-icon="icon: instagram; ratio: .8"></a>
+                    </li>
+                    <li>
+                        <a href="#" uk-icon="icon: pinterest; ratio: .8"></a>
+                    </li>
+                    <li>
+                        <a href="#" uk-icon="icon: rss; ratio: .8"></a>
+                    </li>
+                   <!-- <li>
+                        <a href="#">Login</a>
+                    </li>
+                    <li>
+                        <a href="#">Register</a>
+                    </li>-->
+                </ul>
+            </div>
+        </nav>
+        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+            <nav class="uk-navbar-container" uk-navbar style="position: relative; z-index: 980;">
+                <div class="uk-navbar-left">
+                    <a class="uk-navbar-item uk-logo" href="#"><img src="frontend/img/logo.png" alt=""></a>
+                    <ul class="uk-navbar-nav">
+                        <li><a href="#" class="uk-flex-wrap">
+                            <span class="name">St. Augustines College
+                            Du<span class="sub-title"><br>amina discendo Crescit</span></span>
+                            </a></li>
+                    </ul>
+
+                </div>
+                <div class="uk-navbar-right basis-65 uk-flex-wrap uk-flex-right">
+
+                    <ul class="uk-navbar-nav nav1">
+                        <li>
+                            <a class="uk-text-center uk-flex-wrap" href="#">
+                                <img src="frontend/img/admissions.png" alt="" class="nav-img">
+                                <span class="uk-width-1-1@s">Admissions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="uk-text-center uk-flex-wrap" href="#">
+                                <img src="frontend/img/portal.png" alt="" class="nav-img">
+                                <span class="uk-width-1-1@s">Portal</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="uk-text-center uk-flex-wrap" href="#">
+                                <img src="frontend/img/liturgy.png" alt="" class="nav-img">
+                                <span class="uk-width-1-1@s">Liturgy</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="uk-text-center uk-flex-wrap" href="#">
+                                <img src="frontend/img/school.png" alt="" class="nav-img">
+                                <span class="uk-width-1-1@s">School Life</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="uk-navbar-nav nav2">
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="about.html">about us</a></li>
+                        <li><a href="admission.html">admission</a></li>
+                        <li><a href="academics.html">academics</a></li>
+                        <!--<li><a href="#">prayer & liturgy</a></li>-->
+                        <li><a href="news.html">news</a></li>
+                        <li><a href="gallery.html">gallery</a></li>
+                        <li><a href="contact.html">contact us</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
     <header class="uk-overflow-hidden">
         <div class="uk-position-relative" uk-slideshow="animation: fade; autoplay: true">
 
-            <ul class="uk-slideshow-items">
-                	@foreach($sliders as $slider)
-					@php
-						$styleValue = 1;
-						if($loop->iteration%3 == 0){
-							$styleValue = 3;
-						}
-						else if($loop->iteration%2 == 0){
-							$styleValue = 2;
-						}
-						else{
-						  $styleValue = 1;
-						}
+           <ul class="uk-slideshow-items">
+                  @foreach($sliders as $slider)
+          @php
+            $styleValue = 1;
+            if($loop->iteration%3 == 0){
+              $styleValue = 3;
+            }
+            else if($loop->iteration%2 == 0){
+              $styleValue = 2;
+            }
+            else{
+              $styleValue = 1;
+            }
 
-					@endphp
-				
-				@if($styleValue == 1)
+          @endphp
+        
+        @if($styleValue == 1)
                 <li>
                     <img src="{{url('uploads/'.$slider->image)}}" alt="" uk-cover>
                 </li>
@@ -37,25 +141,25 @@
                     <img src="{{url('uploads/'.$slider->image)}}" alt="" uk-cover>
                 </li>
                 @endif
-				@endforeach
+        @endforeach
             </ul>
 
-            <div class="uk-position-bottom-center uk-position-small">
+                   <div class="uk-position-bottom-center uk-position-small">
                 <ul class="uk-thumbnav">
                     @foreach($sliders as $slider)
-					@php
-						$styleValue = 1;
-						if($loop->iteration%3 == 0){
-							$styleValue = 3;
-						}
-						else if($loop->iteration%2 == 0){
-							$styleValue = 2;
-						}
-						else{
-						  $styleValue = 1;
-						}
+          @php
+            $styleValue = 1;
+            if($loop->iteration%3 == 0){
+              $styleValue = 3;
+            }
+            else if($loop->iteration%2 == 0){
+              $styleValue = 2;
+            }
+            else{
+              $styleValue = 1;
+            }
 
-					@endphp
+          @endphp
                     @if($styleValue == 1)
                     <li uk-slideshow-item="0"><a href="#"><img src="{{url('uploads/'.$slider->image)}}" width="100" alt=""></a></li>
                     @elseif($styleValue == 2)
@@ -95,7 +199,7 @@
                     <span>HISTORY</span>
                     </div>
                 </a>
-                <a href="/gallery">
+                <a href="#">
                     <div class="uk-card">
                     <img src="frontend/img/gallery.png" alt="gallery">
                     <span>GALLERY</span>
@@ -139,32 +243,33 @@
                         </div>
                     </div>
                     <div>
-                        <img src="frontend/img/students.png" alt="">
+                        <img class="side" src="frontend/img/side.jpg" alt="">
                     </div>
                 </div>
             </div>
             <div class="uk-grid-collaps uk-margin-large-bottom" uk-grid>
-               
                 <div class="uk-width-1-3@m uk-grid-collapse" uk-grid>
-                     
                     <div class="uk-width-1-1@m red-card card">
-                    @foreach($thoughtterms as $thoughtterm)
                         <h1 class="thought uk-text-bold">THOUGHT OF <br>THE TERM</h1>
-                        <h3 class="thought uk-text-bold">{{ $thoughtterm->title }}</h3>
-                        <p>"{{ $thoughtterm->bible_quote }}"<br>{{ $thoughtterm->verse }}</p>
-                    @endforeach
+                        @foreach($thoughtterms as $thoughtterm)
+                         @if ($loop->first)
+                        <h3 class="uk-text-bold uk-margin-small-top">{{ $thoughtterm->title }}</h3>
+                        <p>{{ $thoughtterm->bible_quote }}<br>
+                            {{ $thoughtterm->verse }}</p>
+                         @endif
+                        @endforeach
                     </div>
-                    
-                     
                     <div class="uk-width-1-1@m blue-card card">
-                    @foreach($thoughtweeks as $thoughtweek)
                         <h1 class="thought uk-text-bold">THEME OF<br>THE WEEK</h1>
-                        <h3 class="thought uk-text-bold">{{ $thoughtweek->title }}</h3>
-                        <p>"{{ $thoughtweek->bible_quote }}"<br>{{ $thoughtweek->verse }}</p>
-                    @endforeach
+                        @foreach($thoughtweeks as $thoughtweek)
+                         @if ($loop->first)
+                        <h3 class="uk-text-bold uk-margin-small-top">{{ $thoughtweek->title }}</h3>
+                        <p>{{ $thoughtweek->bible_quote }}<br>
+                            {{ ($thoughtweek->verse) }}</p>
+                        @endif
+                        @endforeach
                     </div>
                 </div>
-                
                 <div class="vid-card uk-width-2-3@m uk-padding-remove">
                     <a class="uk-margin-bottom" uk-toggle="target: .hideme; animation: uk-animation-fade; queued: true; duration: 300">
                         <img class="uk-width-1-1@m hideme" src="frontend/img/whyUs.png" alt="">
@@ -198,4 +303,11 @@
 
         </section>
     </main>
-@endsection
+    <footer class="uk-flex uk-flex-middle uk-flex-center bg-black">
+        <span>© 2019 St. Augustines's College Du. Jos South. All Rights Reserved.</span>
+    </footer>
+</div>
+    <script src="frontend/js/uikit.min.js"></script>
+    <script src="frontend/js/uikit-icons.min.js"></script>
+</body>
+</html>
