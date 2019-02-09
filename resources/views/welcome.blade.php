@@ -77,7 +77,7 @@
     <main class="body">
         <div class="uk-container uk-container-small">
             <div class="uk-child-width-1-5@m cards uk-grid-small" uk-grid>
-                <a href="#">
+                <a href="#modal-center-admission" uk-toggle>
                     <div class="uk-card">
                     <img src="frontend/img/admission.png" alt="admission">
                     <span>ADMISSION</span>
@@ -101,7 +101,7 @@
                     <span>GALLERY</span>
                     </div>
                 </a>
-                <a href="#">
+                <a href="#modal-center" uk-toggle>
                     <div class="uk-card">
                     <img src="frontend/img/contact.png" alt="contact">
                     <span>CONTACT</span>
@@ -176,10 +176,9 @@
             <div class="n&e-updates container">
                 <h2 class="uk-child-width-1-1@s uk-text-center uk-text-bold col-black news">NEWS AND EVENT</h2>
                 <div class="uk-child-width-1-3@m uk-grid-match uk-grid-small uk-margin-large-bottom" uk-grid>
-                   
+                @foreach($events as $event)
                     <div>
                         <div class="uk-card uk-card-default">
-                             @foreach($events as $event)
                             <div class="uk-card-media-top">
                                 <img class="img-fit:cover" src="{{url('images/'.$event->image)}}" alt="">
                             </div>
@@ -189,13 +188,211 @@
                                 <p>{{$event->description}}.</p>
                                 <a href="{{ route('more-event', $event->id) }}" class="uk-button bg-sec col-white">Read More</a>
                             </div>
-                             @endforeach
+                           
                         </div>
                     </div>
-    
+                    @endforeach
                 </div>
             </div>
 
         </section>
+        <!-- <a class="uk-button uk-button-default" href="#modal-center" uk-toggle>Open</a> -->
+
+            <div id="modal-center" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+                <form action="{{ route('store-message')}}" method="post">
+                {{csrf_field()}}
+                <fieldset class="uk-fieldset">
+                @if($errors->any())
+                        <div class="uk-alert-danger">
+                        @foreach($errors->all() as $error)
+                            <p>{{ $error }}</p>
+                        @endforeach()
+                        </div>
+                    @endif
+                        @if ($message = Session::get('success'))
+                        <div class="uk-alert-success">
+                            <p><b>{{ $message }}</b></p>
+                       </div>
+                    @endif
+                 <legend class="uk-legend">Get In Touch </legend>
+
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">Your Names <span class="text-danger">*</span></label>
+                    <input class="uk-input" type="text" placeholder="Names" name="name" required>
+                    <span class="text-danger">{{ $errors->first('name') }}</span>
+                </div>
+
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">Your Email<span class="text-danger">*</span></label>
+                    <input class="uk-input" type="email" name="email" placeholder="Email Address" required>
+                    <span class="text-danger">{{ $errors->first('email') }}</span>
+                </div>
+            
+
+                <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text">Your Message<span class="text-danger">*</span></label>
+                    <textarea class="uk-textarea" rows="5" placeholder="Write your message" name="message" required minlength="5" maxlength="255"></textarea>
+                    <span class="text-danger">{{ $errors->first('message') }}</span>
+                </div>
+
+                    
+            </fieldset>
+            <button type="submit" class="uk-button bg-sec col-white">Send Message</button>
+        </form>
+
+            </div>
+        </div>
+
+
+
+
+     <section class="admission-modal">
+     <div id="modal-center-admission" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+                <form action="{{ route('store-admission')}}" method="post">
+                {{csrf_field()}}
+                <fieldset class="uk-fieldset">
+                @if($errors->any())
+                        <div class="uk-alert-danger">
+                        @foreach($errors->all() as $error)
+                            <p>{{ $error }}</p>
+                        @endforeach()
+                        </div>
+                    @endif
+                        @if ($message = Session::get('success'))
+                        <div class="uk-alert-success">
+                            <p><b>{{ $message }}</b></p>
+                       </div>
+                    @endif
+                 <legend class="uk-legend">Admission Portal</legend>
+                    <div class="uk-child-width-1-2@m" uk-grid>
+                        <div>
+                            <div class="uk-margin">
+                            <label class="uk-form-label" for="form-stacked-text">Full Name <span class="text-danger">*</span></label>
+                            <input class="uk-input" type="text" placeholder="Full Name" name="name" required>
+                            <span class="text-danger">{{ $errors->first('name') }}</span>
+                            </div>
+                        </div>
+                        <div>
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-stacked-text">Date Of Birth <span class="text-danger">*</span></label>
+                            <input class="uk-input" type="date" placeholder="Datepicker" data-uk-datepicker name="birth">
+                            <span class="text-danger">{{ $errors->first('birth') }}</span>
+                        </div>
+                        </div>
+                        <div>
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-stacked-text">Gender <span class="text-danger">*</span></label>
+                            <select class="uk-select" name="gender">
+                                <option selected>Please select...</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                            <span class="text-danger">{{ $errors->first('gender') }}</span>
+                        </div>
+                        </div>
+                        <div>
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-stacked-text">Class <span class="text-danger">*</span></label>
+                            <select class="uk-select" name="class">
+                                 <option selected>Please select...</option>
+                                <option value="Js1">JS(One)</option>
+                                <option value="Js2">JS(Two)</option>
+                                <option value="Js3">JS(Three)</option>
+                                <option value="sss1">SSS(one)</option>
+                                <option value="sss2">SSS(Two)</option>
+                                <option value="sss3">SSS(Three)</option>
+                            </select>
+                            <span class="text-danger">{{ $errors->first('class') }}</span>
+                        </div>
+                        </div>
+                        <div>
+                             <div class="uk-margin">
+                            <label class="uk-form-label" for="form-stacked-text">Parent Full Name <span class="text-danger">*</span></label>
+                            <input class="uk-input" type="text" placeholder="Parent/Gaurdian full name" name="parent" required>
+                            <span class="text-danger">{{ $errors->first('parent') }}</span>
+                        </div>
+                        </div>
+                        <div>
+                        <div class="">
+                            <label class="uk-form-label" for="form-stacked-text">Your Email<span class="text-danger">*</span></label>
+                            <input class="uk-input" type="email" name="email" placeholder="Email Address" required>
+                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                        </div>
+                        </div>
+                        <div>
+                        <div class="">
+                            <label class="uk-form-label" for="form-stacked-text">Phone No. <span class="text-danger">*</span></label>
+                            <input class="uk-input" type="text" placeholder="Phone Number" name="phone" required>
+                            <span class="text-danger">{{ $errors->first('phone') }}</span>
+                        </div>
+                        </div>
+                        <div>
+                        <div class="">
+                            <label class="uk-form-label" for="form-stacked-text">Your State<span class="text-danger">*</span></label>
+                            <select class="uk-select" name="state">
+                                <option selected>Please select</option>
+                                <option value="Abia">Abia</option>
+                                <option value="adamawa">Adamawa</option>
+                                <option value="Akwa ibom">Akwa Ibom </option>
+                                <option value="Anambra">Anambra</option>
+                                <option value="bauchi">Bauchi</option>
+                                <option value="bayelsa">Bayelsa</option>
+                                <option value="benue">Benue</option>
+                                <option value="borno">Borno</option>
+                                <option value="cross river">Cross River</option>
+                                <option value="delta">Delta</option>
+                                <option value="ebonyi">Ebonyi</option>
+                                <option value="edo">Edo</option>
+                                <option value="Ekiti">Ekiti</option>
+                                <option value="Enugu">Enugu</option>
+                                <option value="gombe">Gombe</option>
+                                <option value="imo">Imo</option>
+                                <option value="jigawa">Jigawa</option>
+                                <option value="kaduna">Kaduna</option>
+                                <option value="kano">Kano</option>
+                                <option value="katsina">Katsina</option>
+                                <option value="kebbi">Kebbi</option>
+                                <option value="kwara">Kwara</option>
+                                <option value="lagos">Lagos</option>
+                                <option value="nassarawa">Nassarawa</option>
+                                <option value="niger">Niger</option>
+                                <option value="ogun">Ogun</option>
+                                <option value="ondo">Ondo</option>
+                                <option value="osun">Osun</option>
+                                <option value="oyo">Oyo</option>
+                                <option value="plateau">Plateau</option>
+                                <option value="rivers">Rivers</option>
+                                <option value="sokoto">Sokoto</option>
+                                <option value="taraba">Taraba</option>
+                                <option value="yobe">Yobe</option>
+                                <option value="zamfra">Zamfra</option>
+                            </select>
+                            <span class="text-danger">{{ $errors->first('state') }}</span>
+                        </div>
+                        </div>
+                        <div class="uk-width-1-1@s">
+                        <div class="">
+                            <label class="uk-form-label" for="form-stacked-text">Your Address <span class="text-danger">*</span></label>
+                            <input class="uk-input" type="text" placeholder="Address" name="address" required>
+                            <span class="text-danger">{{ $errors->first('address') }}</span>
+                        </div>
+                        </div>
+                    </div>    
+            </fieldset>
+           <div class="uk-margin text-center">
+           <button type="submit" class="uk-button bg-sec col-white">Send Message</button>
+           </div>
+        </form>
+        </div>
+        </div>
+    </section>
     </main>
 @endsection
+
+

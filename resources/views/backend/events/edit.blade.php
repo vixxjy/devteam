@@ -24,12 +24,19 @@
 @include('backend.partials.nav')
             <div class="content">
             <div class="container-fluid">
+            <div class="row">
+                        <div class="col-xs-6 col-md-4">
+                        <a href="#" class="thumbnail">
+                            <img src="{{url('images/'.$event->image)}}" alt="slider image">
+                        </a>
+                        </div>
+                    </div>
                 <div class="row">
                
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Edit Event</h4>
+                                <h4 class="title h4-responsive">Update Event</h4>
                             </div>
                             <div class="content">
                                 @if($errors->any())
@@ -92,7 +99,7 @@
                                     </div>
                                     <div class="text-center">
                                         <a href="/dashboard" class="btn btn-default">Cancel</a>
-                                        <button type="submit" class="btn btn-info btn-fill btn-wd">Add Event/News</button>
+                                        <button type="submit" class="btn btn-info btn-fill btn-wd">Update Event/News</button>
                                     </div>
                                     <div class="clearfix"></div>
                                 </form>

@@ -35,16 +35,23 @@ Route::post( '/slider/update/{id}', ['uses' => 'SliderController@update', 'as' =
 
 Route::get('/event', 'EventsController@index')->name('events');
 Route::post('/event', 'EventsController@store')->name('event-post');
-// Route::post('/event', 'EventsController@store')->name('event-post');
 Route::get( '/event/delete/{id}', 'EventsController@delete')->name('event-delete');
 Route::get( '/event/edit/{id}', 'EventsController@edit')->name('event-edit');
 Route::post( '/event/update/{id}', 'EventsController@update')->name('event-update');
-Route::get( 'event/read-more/{id}', 'PagesController@moreEvent')->name('more-event');
+Route::get( 'event/read/{id}', 'PagesController@moreEvent')->name('more-event');
 
 
 Route::post('/send/message', 'MessageController@store')->name('store-message');
 Route::get('/message', 'MessageController@index')->name('message');
 Route::get( '/message/delete/{id}', 'MessageController@delete')->name('message-delete');
+
+
+
+
+Route::post('/apply/admission', 'AdmissionController@store')->name('store-admission');
+Route::get('/admissions', 'AdmissionController@index')->name('admission');
+Route::get('/admission-view/{id}', 'AdmissionController@admission')->name('admission.view');
+Route::get('/admission/delete/{id}', 'AdmissionController@delete')->name('admission.delete');
 
 
 // Thought of the week routes
