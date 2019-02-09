@@ -12,6 +12,13 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
+                            <a href="/result">
+                                <i class="ti-view-list"></i>
+                                <!--<p class="notification">5</p>-->
+								<p>Entrance Results</p>
+                            </a>
+                        </li>
+                        <li>
                             <a href="/admissions">
                                 <i class="ti-view-list"></i>
                                 <p class="notification">5</p>

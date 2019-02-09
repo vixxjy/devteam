@@ -39,18 +39,13 @@ Route::get( '/event/delete/{id}', 'EventsController@delete')->name('event-delete
 Route::get( '/event/edit/{id}', 'EventsController@edit')->name('event-edit');
 Route::post( '/event/update/{id}', 'EventsController@update')->name('event-update');
 
-Route::get( 'event/{id}', 'PagesController@news')->name('more-event');
+Route::get( 'event/read/{id}', 'PagesController@news')->name('more-event');
 
 // Route::get( 'event/read/{id}', 'PagesController@moreEvent')->name('more-event');
-
-
 
 Route::post('/send/message', 'MessageController@store')->name('store-message');
 Route::get('/message', 'MessageController@index')->name('message');
 Route::get( '/message/delete/{id}', 'MessageController@delete')->name('message-delete');
-
-
-
 
 Route::post('/apply/admission', 'AdmissionController@store')->name('store-admission');
 Route::get('/admissions', 'AdmissionController@index')->name('admission');
@@ -72,3 +67,7 @@ Route::get( '/Thoughtofterm/edit/{id}', ['uses' => 'ThoughttermController@edit',
 Route::post( '/Thoughtofterm/update/{id}', ['uses' => 'ThoughttermController@update', 'as' => 'thoughtterm.update']);
 Route::get( '/Thoughtofterm/delete/{id}', ['uses' => 'ThoughttermController@delete', 'as' => 'thoughtterm.delete']);
 
+// online Results
+Route::get('/results',[ 'uses' => 'ResultController@index', 'as' => 'Results']);
+Route::get('/result',[ 'uses' => 'ResultController@create', 'as' => 'Result.add']);
+Route::post('/result/store',[ 'uses' => 'ResultController@store', 'as' => 'Result.store']);

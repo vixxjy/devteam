@@ -86,7 +86,7 @@
                         <li>
                             <a class="uk-text-center uk-flex-wrap" href="#">
                                 <img src="{{ secure_asset('frontend/img/school.png')}}" alt="" class="nav-img">
-                                <span class="uk-width-1-1@s">School Life</span>
+                                <span class="uk-width-1-1@s">Online-Payments</span>
                             </a>
                         </li>
                     </ul>
@@ -278,14 +278,28 @@
                             src="https://www.youtube-nocookie.com/embed/YE7VzlLtp-4?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" width="100%" height="100%" frameborder="0" allowfullscreen uk-responsive uk-video="automute: true" hidden></iframe>
                 </div>
             </div>
-            <div class="n&e-updates container">
-                <h2 class="uk-child-width-1-1@s uk-text-center uk-text-bold col-black news">NEWS AND EVENT</h2>
-                <div class="uk-child-width-1-3@m uk-grid-match uk-grid-small uk-margin-large-bottom" uk-grid>
-                @foreach($events as $event)
+          <div class="n&e-updates container">
+                <h2 class="uk-child-width-1-1@s uk-text-center uk-text-bold col-black news">NEWS AND EVENT UPDATES</h2>
+                <div class="uk-child-width-1-4@m uk-grid-match uk-grid-small uk-margin-large-bottom" uk-grid>
+                    @foreach($events as $event)
+					@php
+						$styleValue = 1;
+						if($loop->iteration%3 == 0){
+							$styleValue = 3;
+						}
+						else if($loop->iteration%2 == 0){
+							$styleValue = 2;
+						}
+						else{
+						  $styleValue = 1;
+						}
+
+					@endphp
+					@if($styleValue == 1)
                     <div>
                         <div class="uk-card uk-card-default">
                             <div class="uk-card-media-top">
-                                <img class="img-fit:cover" src="{{url('images/'.$event->image)}}" alt="">
+                                <img src="{{url('images/'.$event->image)}}" alt="">
                             </div>
                             <div class="uk-card-body uk-padding-small">
                                 <h6 class="font-600">{{$event->title}}</h6>
@@ -293,10 +307,52 @@
                                 <p>{{str_limit($event->description, 100)}}.</p>
                                 <a href="{{ route('more-event', $event->id) }}" class="uk-button bg-sec col-white">Read More</a>
                             </div>
-                           
                         </div>
                     </div>
-                    @endforeach
+                    @elseif($styleValue == 2)
+                    <div>
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-media-top">
+                                <img src="{{url('images/'.$event->image)}}" alt="">
+                            </div>
+                            <div class="uk-card-body uk-padding-small">
+                                <h6 class="font-600">{{$event->title}}</h6>
+                                <time datetime="2016-04-01T19:00">{{ date('F d, Y', strtotime($event->created_at)) }}</time>
+                                <p>{{str_limit($event->description, 100)}}.</p>
+                                <a href="{{ route('more-event', $event->id) }}" class="uk-button bg-sec col-white">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    @elseif($styleValue == 3)
+                    <div>
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-media-top">
+                                <img src="{{url('images/'.$event->image)}}" alt="">
+                            </div>
+                            <div class="uk-card-body uk-padding-small">
+                                <h6 class="font-600">{{$event->title}}</h6>
+                                <time datetime="2016-04-01T19:00">{{ date('F d, Y', strtotime($event->created_at)) }}</time>
+                                <p>{{str_limit($event->description, 100)}}.</p>
+                                <a href="{{ route('more-event', $event->id) }}" class="uk-button bg-sec col-white">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    @else
+                    <div>
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-media-top">
+                                <img src="{{url('images/'.$event->image)}}" alt="">
+                            </div>
+                            <div class="uk-card-body uk-padding-small">
+                                <h6 class="font-600">{{$event->title}}</h6>
+                                <time datetime="2016-04-01T19:00">{{ date('F d, Y', strtotime($event->created_at)) }}</time>
+                                <p>{{str_limit($event->description, 100)}}.</p>
+                                <a href="{{ route('more-event', $event->id) }}" class="uk-button bg-sec col-white">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    @endif
+				@endforeach
                 </div>
             </div>
 

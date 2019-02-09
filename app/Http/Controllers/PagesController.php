@@ -31,8 +31,9 @@ class PagesController extends Controller
         return view('more-event');
     }
     
-    public function news(){
-        $events = Event::orderBy('id', 'DESC')->get();
+    public function news($id){
+        // dd($id);
+        $events = Event::find($id);
         return view('news')->with('events', $events);
     }
 }
