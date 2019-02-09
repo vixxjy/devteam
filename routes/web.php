@@ -39,7 +39,7 @@ Route::post('/event', 'EventsController@store')->name('event-post');
 Route::get( '/event/delete/{id}', 'EventsController@delete')->name('event-delete');
 Route::get( '/event/edit/{id}', 'EventsController@edit')->name('event-edit');
 Route::post( '/event/update/{id}', 'EventsController@update')->name('event-update');
-Route::get( 'event/read-more/{id}', 'PagesController@moreEvent')->name('more-event');
+Route::get( 'event/{id}', 'PagesController@news')->name('more-event');
 
 
 Route::post('/send/message', 'MessageController@store')->name('store-message');

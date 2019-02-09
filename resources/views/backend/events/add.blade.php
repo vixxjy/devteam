@@ -118,7 +118,7 @@
                                             <tr class="">
                                                 <td>{{$loop->index}}</td>
                                                 <td>{{ $event->title}}</td>
-                                                <td>{{ $event->description }}</td>
+                                                <td>{{ str_limit($event->description,50) }}</td>
                                                 <td><img class="img-responsive" style="max-height: 100px; width: 100px;" src="{{url('images/'.$event->image)}}" alt=""></td>
                                                 <td>{{ $event->author }}</td>
                                                 <td>{{ date('F d, Y', strtotime($event->created_at)) }}</td>          

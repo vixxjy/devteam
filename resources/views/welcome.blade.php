@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="frontend/css/style.css">
+    <link rel="stylesheet" href="{{ secure_asset('frontend/css/style.css')}}">
     <title>St Augustines College DU</title>
 </head>
 <body>
@@ -53,7 +53,7 @@
         <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
             <nav class="uk-navbar-container" uk-navbar style="position: relative; z-index: 980;">
                 <div class="uk-navbar-left">
-                    <a class="uk-navbar-item uk-logo" href="#"><img src="frontend/img/logo.png" alt=""></a>
+                    <a class="uk-navbar-item uk-logo" href="#"><img src="{{ secure_asset('frontend/img/logo.png')}}" alt=""></a>
                     <ul class="uk-navbar-nav">
                         <li><a href="#" class="uk-flex-wrap">
                             <span class="name">St. Augustines College
@@ -67,39 +67,39 @@
                     <ul class="uk-navbar-nav nav1">
                         <li>
                             <a class="uk-text-center uk-flex-wrap" href="#">
-                                <img src="frontend/img/admissions.png" alt="" class="nav-img">
+                                <img src="{{ secure_asset('frontend/img/admissions.png')}}" alt="" class="nav-img">
                                 <span class="uk-width-1-1@s">Admissions</span>
                             </a>
                         </li>
                         <li>
                             <a class="uk-text-center uk-flex-wrap" href="#">
-                                <img src="frontend/img/portal.png" alt="" class="nav-img">
+                                <img src="{{ secure_asset('frontend/img/portal.png')}}" alt="" class="nav-img">
                                 <span class="uk-width-1-1@s">Portal</span>
                             </a>
                         </li>
                         <li>
                             <a class="uk-text-center uk-flex-wrap" href="#">
-                                <img src="frontend/img/liturgy.png" alt="" class="nav-img">
+                                <img src="{{ secure_asset('frontend/img/liturgy.png')}}" alt="" class="nav-img">
                                 <span class="uk-width-1-1@s">Liturgy</span>
                             </a>
                         </li>
                         <li>
                             <a class="uk-text-center uk-flex-wrap" href="#">
-                                <img src="frontend/img/school.png" alt="" class="nav-img">
+                                <img src="{{ secure_asset('frontend/img/school.png')}}" alt="" class="nav-img">
                                 <span class="uk-width-1-1@s">School Life</span>
                             </a>
                         </li>
                     </ul>
 
                     <ul class="uk-navbar-nav nav2">
-                        <li><a href="index.html">home</a></li>
-                        <li><a href="about.html">about us</a></li>
-                        <li><a href="admission.html">admission</a></li>
-                        <li><a href="academics.html">academics</a></li>
+                        <li><a href="/">home</a></li>
+                        <li><a href="/aboutus">about us</a></li>
+                        <li><a href="/admission">admission</a></li>
+                        <li><a href="/academics">academics</a></li>
                         <!--<li><a href="#">prayer & liturgy</a></li>-->
-                        <li><a href="news.html">news</a></li>
-                        <li><a href="gallery.html">gallery</a></li>
-                        <li><a href="contact.html">contact us</a></li>
+                        <!--<li><a href="news.html">news</a></li>-->
+                        <li><a href="/gallery">gallery</a></li>
+                        <li><a href="/contact">contact us</a></li>
                     </ul>
 
                 </div>
@@ -183,31 +183,31 @@
             <div class="uk-child-width-1-5@m cards uk-grid-small" uk-grid>
                 <a href="#">
                     <div class="uk-card">
-                    <img src="frontend/img/admission.png" alt="admission">
+                    <img src="{{ secure_asset('frontend/img/admission.png')}}" alt="admission">
                     <span>ADMISSION</span>
                     </div>
                 </a>
                 <a href="#">
                     <div class="uk-card">
-                    <img src="frontend/img/calender.png" alt="calender">
+                    <img src="{{ secure_asset('frontend/img/calender.png')}}" alt="calender">
                     <span>CALENDER</span>
                     </div>
                 </a>
                 <a href="#">
                     <div class="uk-card">
-                    <img src="frontend/img/history.png" alt="history">
+                    <img src="{{ secure_asset('frontend/img/history.png')}}" alt="history">
                     <span>HISTORY</span>
                     </div>
                 </a>
                 <a href="#">
                     <div class="uk-card">
-                    <img src="frontend/img/gallery.png" alt="gallery">
+                    <img src="{{ secure_asset('frontend/img/gallery.png')}}" alt="gallery">
                     <span>GALLERY</span>
                     </div>
                 </a>
                 <a href="#">
                     <div class="uk-card">
-                    <img src="frontend/img/contact.png" alt="contact">
+                    <img src="{{ secure_asset('frontend/img/contact.png')}}" alt="contact">
                     <span>CONTACT</span>
                     </div>
                 </a>
@@ -222,28 +222,28 @@
                 <div class="uk-child-width-1-2@m" uk-grid>
                     <div class="uk-padding uk-child-width-1-2@m uk-text-left bests" uk-grid>
                         <div>
-                            <img src="frontend/img/best-teach.png" width="70" alt="">
+                            <img src="{{ secure_asset('frontend/img/best-teach.png')}}" width="70" alt="">
                             <h5 class="uk-text-bold uk-margin-small-top">BEST TEACHERS</h5>
                             <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, illo?</p>
                         </div>
                         <div>
-                            <img src="frontend/img/labs.png" width="70" alt="">
+                            <img src="{{ secure_asset('frontend/img/labs.png')}}" width="70" alt="">
                             <h5 class="uk-text-bold uk-margin-small-top">BEST LABS</h5>
                             <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, illo?</p>
                         </div>
                         <div>
-                            <img src="frontend/img/env.png" width="70" alt="">
+                            <img src="{{ secure_asset('frontend/img/env.png')}}" width="70" alt="">
                             <h5 class="uk-text-bold uk-margin-small-top">SERENE ENVIRONMENTS</h5>
                             <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, illo?</p>
                         </div>
                         <div>
-                            <img src="frontend/img/security.png " width="70" alt="">
+                            <img src="{{ secure_asset('frontend/img/security.png')}} " width="70" alt="">
                             <h5 class="uk-text-bold uk-margin-small-top">SECURITY</h5>
                             <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, illo?</p>
                         </div>
                     </div>
                     <div>
-                        <img class="side" src="frontend/img/side.jpg" alt="">
+                        <img class="side" src="{{ secure_asset('frontend/img/side.jpg')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -272,7 +272,7 @@
                 </div>
                 <div class="vid-card uk-width-2-3@m uk-padding-remove">
                     <a class="uk-margin-bottom" uk-toggle="target: .hideme; animation: uk-animation-fade; queued: true; duration: 300">
-                        <img class="uk-width-1-1@m hideme" src="frontend/img/whyUs.png" alt="">
+                        <img class="uk-width-1-1@m hideme" src="{{ secure_asset('frontend/img/whyUs.png')}}" alt="">
                     </a>
                     <iframe class="hideme"
                             src="https://www.youtube-nocookie.com/embed/YE7VzlLtp-4?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" width="100%" height="100%" frameborder="0" allowfullscreen uk-responsive uk-video="automute: true" hidden></iframe>
@@ -291,7 +291,7 @@
                             <div class="uk-card-body uk-padding-small">
                                 <h6 class="font-600">{{$event->title}}</h6>
                                 <time datetime="2016-04-01T19:00">{{ date('F d, Y', strtotime($event->created_at)) }}</time>
-                                <p>{{$event->description}}.</p>
+                                <p>{{str_limit($event->description, 100)}}.</p>
                                 <a href="{{ route('more-event', $event->id) }}" class="uk-button bg-sec col-white">Read More</a>
                             </div>
                              @endforeach
@@ -307,7 +307,7 @@
         <span>© 2019 St. Augustines's College Du. Jos South. All Rights Reserved.</span>
     </footer>
 </div>
-    <script src="frontend/js/uikit.min.js"></script>
-    <script src="frontend/js/uikit-icons.min.js"></script>
+    <script src="{{ secure_asset('frontend/js/uikit.min.js') }}"></script>
+    <script src="{{ secure_asset('frontend/js/uikit-icons.min.js') }}"></script>
 </body>
 </html>
