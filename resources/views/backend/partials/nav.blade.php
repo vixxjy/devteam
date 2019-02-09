@@ -12,7 +12,7 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <a href="/admissions">
                                 <i class="ti-view-list"></i>
                                 <p class="notification">5</p>
 								<p>Applications</p>

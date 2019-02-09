@@ -149,6 +149,7 @@
 
     @include('backend.partials.footer')
 
+
     </div>
 </div>
 </div>
@@ -166,3 +167,4 @@
  </script>
 
 @endsection
+
