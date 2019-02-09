@@ -68,7 +68,7 @@
                         <li>
                             <a class="uk-text-center uk-flex-wrap" href="#">
                                 <img src="{{ secure_asset('frontend/img/admissions.png')}}" alt="" class="nav-img">
-                                <span class="uk-width-1-1@s">Admissions</span>
+                                <span class="uk-width-1-1@s">Application</span>
                             </a>
                         </li>
                         <li>
@@ -98,7 +98,7 @@
                         <li><a href="/academics">academics</a></li>
                         <!--<li><a href="#">prayer & liturgy</a></li>-->
                         <!--<li><a href="news.html">news</a></li>-->
-                        <li><a href="/gallery">gallery</a></li>
+                        <li><a href="/results">Results</a></li>
                         <li><a href="/contact">contact us</a></li>
                     </ul>
 
@@ -184,13 +184,13 @@
                 <a href="#modal-center-admission" uk-toggle>
                     <div class="uk-card">
                     <img src="{{ secure_asset('frontend/img/admission.png')}}" alt="admission">
-                    <span>ADMISSION</span>
+                    <span>APPLICATION</span>
                     </div>
                 </a>
                 <a href="#">
                     <div class="uk-card">
                     <img src="{{ secure_asset('frontend/img/calender.png')}}" alt="calender">
-                    <span>CALENDER</span>
+                    <span>RESULTS</span>
                     </div>
                 </a>
                 <a href="#">
@@ -199,7 +199,7 @@
                     <span>HISTORY</span>
                     </div>
                 </a>
-                <a href="#">
+                <a href="/gallery">
                     <div class="uk-card">
                     <img src="{{ secure_asset('frontend/img/gallery.png')}}" alt="gallery">
                     <span>GALLERY</span>
@@ -506,6 +506,4 @@
     <script src="{{ secure_asset('frontend/js/uikit-icons.min.js') }}"></script>
 </body>
 </html>
-
-@endsection
 

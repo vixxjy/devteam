@@ -98,7 +98,7 @@
                         <li><a href="/academics">academics</a></li>
                         <!--<li><a href="#">prayer & liturgy</a></li>-->
                         <!--<li><a href="news.html">news</a></li>-->
-                        <li><a href="/gallery">gallery</a></li>
+                        <li><a href="/results">Results</a></li>
                         <li><a href="/contact">contact us</a></li>
                     </ul>
 
