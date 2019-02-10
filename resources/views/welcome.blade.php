@@ -118,24 +118,23 @@
             else{
               $styleValue = 1;
             }
-
           @endphp
         
         @if($styleValue == 1)
                 <li>
-                    <img src="{{url('uploads/'.$slider->image)}}" alt="" uk-cover>
+                    <img src="{{secure_asset('uploads/'.$slider->image)}}" alt="" uk-cover>
                 </li>
                 @elseif($styleValue == 2)
                 <li>
-                    <img src="{{url('uploads/'.$slider->image)}}" alt="" uk-cover>
+                    <img src="{{secure_asset('uploads/'.$slider->image)}}" alt="" uk-cover>
                 </li>
                 @elseif($styleValue == 3)
                 <li>
-                    <img src="{{url('uploads/'.$slider->image)}}" alt="" uk-cover>
+                    <img src="{{secure_asset('uploads/'.$slider->image)}}" alt="" uk-cover>
                 </li>
                 @else
                 <li>
-                    <img src="{{url('uploads/'.$slider->image)}}" alt="" uk-cover>
+                    <img src="{{secure_asset('uploads/'.$slider->image)}}" alt="" uk-cover>
                 </li>
                 @endif
         @endforeach
@@ -155,16 +154,15 @@
             else{
               $styleValue = 1;
             }
-
           @endphp
                     @if($styleValue == 1)
-                    <li uk-slideshow-item="0"><a href="#"><img src="{{url('uploads/'.$slider->image)}}" width="100" alt=""></a></li>
+                    <li uk-slideshow-item="0"><a href="#"><img src="{{secure_asset('uploads/'.$slider->image)}}" width="100" alt=""></a></li>
                     @elseif($styleValue == 2)
-                    <li uk-slideshow-item="1"><a href="#"><img src="{{url('uploads/'.$slider->image)}}" width="100" alt=""></a></li>
+                    <li uk-slideshow-item="1"><a href="#"><img src="{{secure_asset('uploads/'.$slider->image)}}" width="100" alt=""></a></li>
                     @elseif($styleValue == 3)
-                    <li uk-slideshow-item="2"><a href="#"><img src="{{url('uploads/'.$slider->image)}}" width="100" alt=""></a></li>
+                    <li uk-slideshow-item="2"><a href="#"><img src="{{secure_asset('uploads/'.$slider->image)}}" width="100" alt=""></a></li>
                     @else
-                    <li uk-slideshow-item="3"><a href="#"><img src="{{url('uploads/'.$slider->image)}}" width="100" alt=""></a></li>
+                    <li uk-slideshow-item="3"><a href="#"><img src="{{secure_asset('uploads/'.$slider->image)}}" width="100" alt=""></a></li>
                     @endif
                     @endforeach
                 </ul>
@@ -184,7 +182,7 @@
                     <span>APPLICATION</span>
                     </div>
                 </a>
-                <a href="/results">
+                <a href="#">
                     <div class="uk-card">
                     <img src="{{ secure_asset('frontend/img/calender.png')}}" alt="calender">
                     <span>RESULTS</span>
@@ -290,13 +288,12 @@
 						else{
 						  $styleValue = 1;
 						}
-
 					@endphp
 					@if($styleValue == 1)
                     <div>
                         <div class="uk-card uk-card-default">
                             <div class="uk-card-media-top">
-                                <img src="{{url('images/'.$event->image)}}" alt="">
+                                <img src="{{secure_asset('images/'.$event->image)}}" alt="">
                             </div>
                             <div class="uk-card-body uk-padding-small">
                                 <h6 class="font-600">{{$event->title}}</h6>
@@ -310,7 +307,7 @@
                     <div>
                         <div class="uk-card uk-card-default">
                             <div class="uk-card-media-top">
-                                <img src="{{url('images/'.$event->image)}}" alt="">
+                                <img src="{{secure_asset('images/'.$event->image)}}" alt="">
                             </div>
                             <div class="uk-card-body uk-padding-small">
                                 <h6 class="font-600">{{$event->title}}</h6>
@@ -324,7 +321,7 @@
                     <div>
                         <div class="uk-card uk-card-default">
                             <div class="uk-card-media-top">
-                                <img src="{{url('images/'.$event->image)}}" alt="">
+                                <img src="{{secure_asset('images/'.$event->image)}}" alt="">
                             </div>
                             <div class="uk-card-body uk-padding-small">
                                 <h6 class="font-600">{{$event->title}}</h6>
@@ -338,7 +335,7 @@
                     <div>
                         <div class="uk-card uk-card-default">
                             <div class="uk-card-media-top">
-                                <img src="{{url('images/'.$event->image)}}" alt="">
+                                <img src="{{secure_asset('images/'.$event->image)}}" alt="">
                             </div>
                             <div class="uk-card-body uk-padding-small">
                                 <h6 class="font-600">{{$event->title}}</h6>
@@ -559,4 +556,3 @@
     <script src="{{ secure_asset('frontend/js/uikit-icons.min.js') }}"></script>
 </body>
 </html>
-

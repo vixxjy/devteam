@@ -29,7 +29,7 @@
                     <div class="col-md-12">
                         <div class="card p-5">
                             <div class="header">
-                                <h4 class="title">Add Event/News</h4>
+                                <h4 class="title">Add Entrance Results</h4>
                             </div>
                             <div class="content">
                                 @if($errors->any())

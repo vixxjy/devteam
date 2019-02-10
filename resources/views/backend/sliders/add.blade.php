@@ -110,7 +110,7 @@
                                                 <td>{{$slider->id}}</td>
                                                 <td>{{ $slider->title}}</td>
                                                 <td>{{ $slider->subtitle }}</td>
-                                                <td><img class="img-responsive" style="max-height: 100px; width: 100px;" src="{{url('uploads/'.$slider->image)}}" alt=""></td>
+                                                <td><img class="img-responsive" style="max-height: 100px; width: 100px;" src="{{secure_asset('uploads/'.$slider->image)}}" alt=""></td>
                                                 <td>{{ $slider->order }}</td>
                                                 <td><a href="{{ route('slider.edit', $slider->id) }}"><button id="edit-modal" class="edit-modal btn btn-info">
                                                         <span class="glyphicon glyphicon-edit"></span> Edit

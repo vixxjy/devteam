@@ -50,7 +50,7 @@
                                     <div class="row">
                                       <div class="col-xs-6 col-md-4">
                                         <a href="#" class="thumbnail">
-                                          <img src="{{url('uploads/'.$slider->image)}}" alt="slider image">
+                                          <img src="{{secure_asset('uploads/'.$slider->image)}}" alt="slider image">
                                         </a>
                                       </div>
                                     </div>
