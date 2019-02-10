@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V6</title>
+	<title>St Augustines College DU</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -31,7 +31,7 @@
 	
 	<div class="limiter">
 		<div class="container-login100">
-			<div class="wrap-login100 p-t-85 p-b-20">
+			<div class="wrap-login100 p-t-20 p-b-20">
 				     @if ($message = Session::get('error'))
                         <div class="alert alert-danger">
                             <p><b>{{ $message }}</b></p>
@@ -47,24 +47,35 @@
 					{{csrf_field()}}
 					
 					<span class="login100-form-avatar">
-						<img src="login/images/avatar-01.jpg" alt="AVATAR">
+						<img src="https://staugustinescollegeduportal.ng/markssheetcontent/res-logo2.png" alt="logo">
 					</span>
 
-					<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
-						<input class="input100" type="text" name="username">
-						<span class="focus-input100" data-placeholder="Username"></span>
-					</div>
+				     <fieldset>
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user red"></i></span>
+                            <input type="text" class="form-control" name="username" placeholder="Username">
+                        </div>
+                        <div class="clearfix"></div><br>
 
-					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-						<input class="input100" type="password" name="password">
-						<span class="focus-input100" data-placeholder="Password"></span>
-					</div>
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock red"></i></span>
+                            <input type="password" class="form-control" name="password" placeholder="Password">
+                        </div>
 
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" style="background: #000080">
-							Login
-						</button>
-					</div>
+                    
+                        <div class="clearfix"></div>
+                        @if (isset($error))
+                                <div class="alert alert-danger">
+                                <button data-dismiss="alert" class="close" type="button">×</button>
+                                <strong>{{ $error }}.</strong>
+                            </div>
+                        @endif
+						<br>
+
+                        <div class="col-md-12 text-center"> 
+						    <button id="singlebutton" name="singlebutton" class="btn btn-primary btn-lg btn-block">Login</button> 
+						</div>
+                    </fieldset>
 				</form>
 			</div>
 		</div>

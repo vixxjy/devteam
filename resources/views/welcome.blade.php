@@ -41,12 +41,9 @@
                     <li>
                         <a href="#" uk-icon="icon: rss; ratio: .8"></a>
                     </li>
-                   <!-- <li>
-                        <a href="#">Login</a>
+                  <li>
+                        <a href="/signin">Login</a>
                     </li>
-                    <li>
-                        <a href="#">Register</a>
-                    </li>-->
                 </ul>
             </div>
         </nav>
@@ -72,7 +69,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="uk-text-center uk-flex-wrap" href="#">
+                            <a class="uk-text-center uk-flex-wrap" href="https://staugustinescollegeduportal.ng/">
                                 <img src="{{ secure_asset('frontend/img/portal.png')}}" alt="" class="nav-img">
                                 <span class="uk-width-1-1@s">Portal</span>
                             </a>
