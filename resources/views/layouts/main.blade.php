@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ secure_asset('frontend/css/style.css')}}">
     <title>St Augustines College DU</title>
+     @yield('style')
 </head>
 <body>
 <div class="wrapper uk-container uk-container-large">
@@ -113,5 +114,6 @@
     </div>
      <script src="{{ secure_asset('frontend/js/uikit.min.js') }}"></script>
     <script src="{{ secure_asset('frontend/js/uikit-icons.min.js') }}"></script>
+    @yield('script')
 </body>
 </html>

@@ -9,14 +9,14 @@ class ResultController extends Controller
 {
     public function index()
     {
-        $datas = Result::all();
+        $datas = Result::orderBy('id', 'DESC')->get();
         return view('results', ['datas' => $datas]);
     }
     
     public function create()
     {
         
-        $datas = Result::all();
+        $datas = Result::orderBy('id', 'DESC')->get();
         // dd($datas);
         return view('backend.results.create', ['datas' => $datas]);
     }

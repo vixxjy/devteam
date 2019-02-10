@@ -141,6 +141,7 @@
                                                 <th class="text-center">Total Score</th>
                                                 <th class="text-center">Cumm</th>
                                                 <th class="text-center">Remarks</th>
+                                                <th class="text-center"></th>
                                             </tr>
                                         </thead>
                                         <tbody>
