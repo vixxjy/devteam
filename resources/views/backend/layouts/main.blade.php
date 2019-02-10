@@ -66,7 +66,7 @@
 
         	$.notify({
             	icon: 'ti-gift',
-            	message: "Welcome to <b>ST. Augustine College Du</b> - pls enjoy our wonderful experiencies"
+            	message: "Welcome to <b>St. Augustine's College Du</b> - We care..."
 
             },{
                 type: 'success',

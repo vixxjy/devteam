@@ -21,24 +21,16 @@
                         <li>
                             <a href="/admissions">
                                 <i class="ti-view-list"></i>
-                                <p class="notification">5</p>
+                                <!--<p class="notification"></p>-->
 								<p>Applications</p>
                             </a>
                         </li>
-                        <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="ti-bell"></i>
-                                    <p class="notification">5</p>
-									<p>Notifications</p>
-									<b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a href="/message">Contact Us</a></li>
-                                <!--<li><a href="#">Notification 2</a></li>-->
-                                <!--<li><a href="#">Notification 3</a></li>-->
-                                <!--<li><a href="#">Notification 4</a></li>-->
-                                <!--<li><a href="#">Another notification</a></li>-->
-                              </ul>
+                        <li>
+                            <a href="/message">
+                                <i class="ti-view-list"></i>
+                                <!--<p class="notification"></p>-->
+								<p>Contact Us</p>
+                            </a>
                         </li>
 						<li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">

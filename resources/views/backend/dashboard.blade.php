@@ -32,7 +32,7 @@
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Sliders</p>
-                                            105GB
+                                            {{ $sliders->count()}}
                                         </div>
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Thought of the Term</p>
-                                            $1,345
+                                            {{$thoughtterms->count()}}
                                         </div>
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Theme of the week</p>
-                                            23
+                                            {{$thoughtweeks->count()}}
                                         </div>
                                     </div>
                                 </div>
@@ -106,8 +106,8 @@
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Users</p>
-                                            +45
+                                            <p>News/Events</p>
+                                            {{$events->count()}}
                                         </div>
                                     </div>
                                 </div>
