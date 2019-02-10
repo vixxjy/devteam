@@ -184,7 +184,7 @@
                     <span>APPLICATION</span>
                     </div>
                 </a>
-                <a href="#">
+                <a href="/results">
                     <div class="uk-card">
                     <img src="{{ secure_asset('frontend/img/calender.png')}}" alt="calender">
                     <span>RESULTS</span>
