@@ -64,9 +64,9 @@
 
                     <ul class="uk-navbar-nav nav1">
                         <li>
-                            <a class="uk-text-center uk-flex-wrap" href="#">
+                            <a class="uk-text-center uk-flex-wrap" href="/admission">
                                 <img src="{{ secure_asset('frontend/img/admissions.png')}}" alt="" class="nav-img">
-                                <span class="uk-width-1-1@s">Admissions</span>
+                                <span class="uk-width-1-1@s">Application</span>
                             </a>
                         </li>
                         <li>
@@ -84,7 +84,7 @@
                         <li>
                             <a class="uk-text-center uk-flex-wrap" href="#">
                                 <img src="{{ secure_asset('frontend/img/school.png')}}" alt="" class="nav-img">
-                                <span class="uk-width-1-1@s">School Life</span>
+                                <span class="uk-width-1-1@s">Online-Payments</span>
                             </a>
                         </li>
                     </ul>

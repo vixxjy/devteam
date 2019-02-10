@@ -63,7 +63,7 @@
 
                     <ul class="uk-navbar-nav nav1">
                         <li>
-                            <a class="uk-text-center uk-flex-wrap" href="#">
+                            <a class="uk-text-center uk-flex-wrap" href="#modal-center-admission" uk-toggle>
                                 <img src="{{ secure_asset('frontend/img/admissions.png')}}" alt="" class="nav-img">
                                 <span class="uk-width-1-1@s">Application</span>
                             </a>

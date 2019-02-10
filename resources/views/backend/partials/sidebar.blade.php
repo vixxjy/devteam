@@ -68,7 +68,7 @@
                     </a>
                 </li>
 				<li class="active-pro">
-                    <a href="#">
+                    <a href="/user/add">
                         <i class="ti-user"></i>
                         <p>Users</p>
                     </a>

@@ -24,6 +24,8 @@ Route::get('/dashboard', [ 'uses' => 'dashboardController@dashboard', 'as' => 'd
 Route::get('/signin', [ 'uses' => 'AuthController@login', 'as' => 'login']);
 Route::post('/signin', [ 'uses' => 'AuthController@signin', 'as' => 'signin']);
 Route::get('/logout',[ 'uses' => 'AuthController@logout', 'as' => 'logout']);
+Route::get('/user/add',[ 'uses' => 'AuthController@addUser', 'as' => 'add.user']);
+Route::post('/user/store',[ 'uses' => 'AuthController@store', 'as' => 'user.store']);
 
 // slider routes
 Route::get('/slider',[ 'uses' => 'SliderController@index', 'as' => 'slider']);
