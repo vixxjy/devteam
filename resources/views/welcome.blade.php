@@ -563,7 +563,7 @@
             <li><a href="/admission">Admissions</a></li>
             <li><a href="https://staugustinescollegeduportal.ng/">Portal</a></li>
             <li><a href="#">Liturgy</a></li>
-            <li><a href="#">School Life</a></li>
+            <li><a href="#">Online-Payments</a></li>
             <li><a href="/">home</a></li>
             <li><a href="/aboutus">about us</a></li>
             <li><a href="/admission">admission</a></li>
