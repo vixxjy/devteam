@@ -7,7 +7,7 @@
 
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text">
+                <a href="/dashboard" class="simple-text">
                     St. Augustine Du
                 </a>
             </div>

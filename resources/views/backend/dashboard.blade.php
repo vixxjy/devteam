@@ -150,8 +150,8 @@
                     <div class="col-md-6">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Email Statistics</h4>
-                                <p class="category">Last Campaign Performance</p>
+                                <h4 class="title">Application Statistics</h4>
+                                <p class="category">Online Application Performance</p>
                             </div>
                             <div class="content">
                                 <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
@@ -173,16 +173,16 @@
                     <div class="col-md-6">
                         <div class="card ">
                             <div class="header">
-                                <h4 class="title">2015 Sales</h4>
-                                <p class="category">All products including Taxes</p>
+                                <h4 class="title">Our Growth</h4>
+                                <p class="category">All events and news</p>
                             </div>
                             <div class="content">
                                 <div id="chartActivity" class="ct-chart"></div>
 
                                 <div class="footer">
                                     <div class="chart-legend">
-                                        <i class="fa fa-circle text-info"></i> Tesla Model S
-                                        <i class="fa fa-circle text-warning"></i> BMW 5 Series
+                                        <i class="fa fa-circle text-info"></i> students
+                                        <i class="fa fa-circle text-warning"></i> staff
                                     </div>
                                     <hr>
                                     <div class="stats">
