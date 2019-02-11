@@ -216,7 +216,7 @@
                 <h2 class="col-black uk-text-bold uk-margin-remove">WHAT WE PROVIDE</h2>
                 <p class="uk-width-2-3@m margin-center uk-margin-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A  asperiores doloremque eveniet libero quisquam reiciendis similique sint soluta ullam! Natus.</p>
                 <div class="uk-child-width-1-2@m pb-50" uk-grid>
-                    <div class="uk-padding uk-child-width-1-2@m uk-text-left bests" uk-grid>
+                    <div class="uk-text-center uk-padding uk-child-width-1-2@m uk-text-left bests" uk-grid>
                         <div>
                             <img src="{{ secure_asset('frontend/img/best-teach.png')}}" width="70" alt="">
                             <h5 class="uk-text-bold uk-margin-small-top">BEST TEACHERS</h5>
@@ -568,7 +568,7 @@
             <li><a href="/admission">admission</a></li>
             <li><a href="/academics">academics</a></li>
                         <!--<li><a href="#">prayer & liturgy</a></li>-->
-            <!--<li><a href="news.html">news</a></li>-->
+             <li><a href="/downloads">Downloads</a></li>
             <li><a href="/results">Results</a></li>
             <li><a href="/contact">contact us</a></li>
         </ul>
