@@ -49,7 +49,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 120%;
   font: inherit;
   vertical-align: baseline; }
 
@@ -59,7 +59,7 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
-  line-height: 1;
+  line-height: 1.2;
   overflow-x: hidden; }
 
 ol, ul {
@@ -440,7 +440,7 @@ th {
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: border-box; }
 
 html {
   font-size: 62.5%; }
@@ -6579,6 +6579,13 @@ iframe.uk-cover {
   font-weight: 600;
   font-family: "OpenSans", sans-serif; }
 
+.uk-navbar-toggle {
+  display: none;
+  position: absolute;
+  z-index: 123456;
+  right: 0;
+  height: 90px; }
+
 .uk-slideshow-items {
   min-height: calc((100vh) - 170px) !important; }
 
@@ -6667,14 +6674,7 @@ a.uk-slidenav-next.uk-icon.uk-slidenav {
 .news {
   position: relative; }
   .news:before {
-    content: '';
-    position: absolute;
-    bottom: -30px;
-    height: 20px;
-    width: 30%;
-    background: url(../img/news-before.png) no-repeat center center;
-    -webkit-background-size: contain;
-    background-size: contain; }
+    content: none }
 
 iframe {
   width: 100%;
@@ -6695,6 +6695,12 @@ iframe {
 
 .uk-container-large {
   max-width: 1300px; }
+
+.cursive {
+  font-family: cursive; }
+
+.large {
+  font-size: 6rem; }
 
 footer {
   height: 150px; }
@@ -6738,11 +6744,69 @@ footer {
 .margin-center {
   margin: 0 auto; }
 
+.font-2rem {
+  font-size: 2rem; }
+
+.font-1\.2rem {
+  font-size: 1.2rem; }
+
 @media screen and (max-width: 959px) {
   .pl-pr-container {
     padding: 0 10px; }
 
   .uk-thumbnav img {
     width: 60px; } }
+html {
+  font-size: 100.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 80.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 70%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 105%; } }
+
+#topbar {
+  background: #171717;
+  color: #fff; }
+  @media only screen and (max-width: 56.25em) {
+    #topbar {
+      display: none; } }
+
+.uk-logo img {
+  height: 100px; }
+  @media only screen and (max-width: 75em) {
+    .uk-logo img {
+      height: 80px; } }
+  @media only screen and (max-width: 56.25em) {
+    .uk-logo img {
+      height: 50px; } }
+
+.uk-navbar-nav > li > a .name {
+  text-transform: none;
+  color: #1d034d;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "OpenSans Bold", sans-serif; }
+  @media only screen and (max-width: 75em) {
+    .uk-navbar-nav > li > a .name {
+      font-size: 1.6rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .uk-navbar-nav > li > a .name {
+      font-size: 1rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .uk-navbar-right {
+    display: none; } }
+
+@media only screen and (max-width: 56.25em) {
+  .uk-navbar-toggle {
+    display: flex; } }
+    
+    .pb-50{
+      padding-bottom: 50px
+    }
 
 /*# sourceMappingURL=style.css.map */

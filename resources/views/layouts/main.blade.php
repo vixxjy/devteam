@@ -101,6 +101,7 @@
                     </ul>
 
                 </div>
+                <a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #offcanvas-flip" href="#"></a>
             </nav>
         </div>
     
@@ -109,8 +110,31 @@
             <span>© 2019 St. Augustines's College Du. Jos South. All Rights Reserved.</span>
         </footer>
     </div>
+    <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar uk-flex-middle uk-flex uk-flex-center">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            <li><a href="/admission">Admissions</a></li>
+            <li><a href="https://staugustinescollegeduportal.ng/">Portal</a></li>
+            <li><a href="#">Liturgy</a></li>
+            <li><a href="#">School Life</a></li>
+            <li><a href="/">home</a></li>
+            <li><a href="/aboutus">about us</a></li>
+            <li><a href="/admission">admission</a></li>
+            <li><a href="/academics">academics</a></li>
+                        <!--<li><a href="#">prayer & liturgy</a></li>-->
+            <!--<li><a href="news.html">news</a></li>-->
+            <li><a href="/results">Results</a></li>
+            <li><a href="/contact">contact us</a></li>
+        </ul>
+
+    </div>
+</div>
      <script src="{{ secure_asset('frontend/js/uikit.min.js') }}"></script>
     <script src="{{ secure_asset('frontend/js/uikit-icons.min.js') }}"></script>
     @yield('script')
+    
 </body>
 </html>

@@ -62,7 +62,7 @@
                     </a>
                 </li>
                  <li>
-                    <a href="#">
+                    <a href="/pdf/list">
                         <i class="ti-upload"></i>
                         <p>Pdf Uploads</p>
                     </a>

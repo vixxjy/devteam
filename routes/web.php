@@ -73,3 +73,7 @@ Route::get( '/Thoughtofterm/delete/{id}', ['uses' => 'ThoughttermController@dele
 Route::get('/results',[ 'uses' => 'ResultController@index', 'as' => 'Results']);
 Route::get('/result',[ 'uses' => 'ResultController@create', 'as' => 'Result.add']);
 Route::post('/result/store',[ 'uses' => 'ResultController@store', 'as' => 'Result.store']);
+
+// pdf routes
+Route::get('/pdf/list',[ 'uses' => 'PdfController@index', 'as' => 'pdf']);
+Route::post('/pdf/add',[ 'uses' => 'PdfController@upload', 'as' => 'pdf.add']);

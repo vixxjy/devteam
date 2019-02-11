@@ -100,6 +100,7 @@
                     </ul>
 
                 </div>
+                <a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #offcanvas-flip" href="#"></a>
             </nav>
         </div>
     <header class="uk-overflow-hidden">
@@ -214,7 +215,7 @@
                     DU</h3>
                 <h2 class="col-black uk-text-bold uk-margin-remove">WHAT WE PROVIDE</h2>
                 <p class="uk-width-2-3@m margin-center uk-margin-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A  asperiores doloremque eveniet libero quisquam reiciendis similique sint soluta ullam! Natus.</p>
-                <div class="uk-child-width-1-2@m" uk-grid>
+                <div class="uk-child-width-1-2@m pb-50" uk-grid>
                     <div class="uk-padding uk-child-width-1-2@m uk-text-left bests" uk-grid>
                         <div>
                             <img src="{{ secure_asset('frontend/img/best-teach.png')}}" width="70" alt="">
@@ -551,6 +552,28 @@
     <footer class="uk-flex uk-flex-middle uk-flex-center bg-black">
         <span>© 2019 St. Augustines's College Du. Jos South. All Rights Reserved.</span>
     </footer>
+</div>
+    <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar uk-flex-middle uk-flex uk-flex-center">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            <li><a href="/admission">Admissions</a></li>
+            <li><a href="https://staugustinescollegeduportal.ng/">Portal</a></li>
+            <li><a href="#">Liturgy</a></li>
+            <li><a href="#">School Life</a></li>
+            <li><a href="/">home</a></li>
+            <li><a href="/aboutus">about us</a></li>
+            <li><a href="/admission">admission</a></li>
+            <li><a href="/academics">academics</a></li>
+                        <!--<li><a href="#">prayer & liturgy</a></li>-->
+            <!--<li><a href="news.html">news</a></li>-->
+            <li><a href="/results">Results</a></li>
+            <li><a href="/contact">contact us</a></li>
+        </ul>
+
+    </div>
 </div>
     <script src="{{ secure_asset('frontend/js/uikit.min.js') }}"></script>
     <script src="{{ secure_asset('frontend/js/uikit-icons.min.js') }}"></script>
