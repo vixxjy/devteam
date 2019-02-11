@@ -50,4 +50,32 @@ class AuthController extends Controller
          User::create($data);
         return redirect()->back()->with('success', 'User added Successfully');
     }
+
+    public function edit($id){
+        $data = User::find($id); 
+        return view('backend.user.edit')->with('data', $data);
+    }
+
+    public function UpdateUser(Request $request, $id){
+        $this->validate($request, [
+            'username' => 'required', 
+            'email' => 'email|required',
+            'password' => 'required|min:4',
+        ]);
+        
+        $data = User::find($id);
+        $data->username = $request->username;
+        $data->email = $request->email;
+        $data->role = $request->role;
+        $data->password = $request->password;
+        $data->save();
+        return redirect('/user/add')->with('success', 'User updated Successfully');
+    }
+
+    public function delete($id){
+        $data = User::find($id);
+        $data->delete();
+        Session::flash('success', 'User was deleted successfully!');
+        return redirect()->back();
+    }
 }
