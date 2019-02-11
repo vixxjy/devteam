@@ -28,6 +28,9 @@ Route::post('/signin', [ 'uses' => 'AuthController@signin', 'as' => 'signin']);
 Route::get('/logout',[ 'uses' => 'AuthController@logout', 'as' => 'logout']);
 Route::get('/user/add',[ 'uses' => 'AuthController@addUser', 'as' => 'add.user']);
 Route::post('/user/store',[ 'uses' => 'AuthController@store', 'as' => 'user.store']);
+Route::get('/user/update/{id}',[ 'uses' => 'AuthController@edit', 'as' => 'edit.user']);
+Route::post('/user/update/{id}',[ 'uses' => 'AuthController@UpdateUser', 'as' => 'user.update']);
+Route::get( '/user/delete/{id}', ['uses' => 'AuthController@delete', 'as' => 'delete.user']);
 
 // slider routes
 Route::get('/slider',[ 'uses' => 'SliderController@index', 'as' => 'slider']);
@@ -75,9 +78,21 @@ Route::get( '/Thoughtofterm/delete/{id}', ['uses' => 'ThoughttermController@dele
 Route::get('/results',[ 'uses' => 'ResultController@index', 'as' => 'Results']);
 Route::get('/result',[ 'uses' => 'ResultController@create', 'as' => 'Result.add']);
 Route::post('/result/store',[ 'uses' => 'ResultController@store', 'as' => 'Result.store']);
+Route::get('/result/edit/{id}',[ 'uses' => 'ResultController@edit', 'as' => 'Result.edit']);
+Route::post('/result/update/{id}',[ 'uses' => 'ResultController@update', 'as' => 'Result.update']);
+Route::get('/result/delete/{id}',[ 'uses' => 'ResultController@delete', 'as' => 'Result.delete']);
 
 // pdf routes
 Route::get('/pdf/list',[ 'uses' => 'PdfController@index', 'as' => 'pdf']);
 Route::post('/pdf/add',[ 'uses' => 'PdfController@upload', 'as' => 'pdf.add']);
+<<<<<<< HEAD
+
+Route::get('/video/add', ['uses' => 'YoutubeController@index', 'as' => 'video.add']);
+Route::post('/video/add', ['uses' => 'YoutubeController@store', 'as' => 'video.store']);
+Route::get('/video/edit/{id}', ['uses' => 'YoutubeController@edit', 'as' => 'edit.video']);
+Route::post('/video/update/{id}', ['uses' => 'YoutubeController@update', 'as' => 'update.video']);
+Route::get('/video/delete/{id}', ['uses' => 'YoutubeController@delete', 'as' => 'delete.video']);
+=======
 Route::get('pdf/{uuid}/download', 'PdfController@download')->name('pdf.download');
 Route::get( '/pdf/delete/{id}', ['uses' => 'PdfController@delete', 'as' => 'pdf.delete']);
+>>>>>>> e5bdee895dcfaed5f7f837821f6a3c4c0b685d40

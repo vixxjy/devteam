@@ -129,10 +129,10 @@
                                                 <td>{{ $data->email }}</td>
                                                 <td>{{ $data->role }}</td>
                                                
-                                                <td><a href="#"><button id="edit-modal" class="edit-modal btn btn-info">
+                                                <td><a href="{{route('edit.user', $data->id)}}"><button id="edit-modal" class="edit-modal btn btn-info">
                                                         <span class="glyphicon glyphicon-edit"></span>
                                                     </button></a>
-                                                    <a href="#" onclick="return confirm('Do you really want to delete This?')">
+                                                    <a href="{{route('delete.user', $data->id)}}" onclick="return confirm('Do you really want to delete This?')">
                                                     <button class="delete-modal btn btn-danger">
                                                         <span class="glyphicon glyphicon-trash"></span>
                                                     </button>

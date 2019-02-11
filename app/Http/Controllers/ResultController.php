@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Result;
+use Session;
 
 class ResultController extends Controller
 {
@@ -41,5 +42,45 @@ class ResultController extends Controller
         Result::create($data);
 
         return redirect()->back()->with('success', 'Result added successfully.');    
+    }
+
+
+    public function edit($id){
+        $data = Result::find($id);
+        return view('backend.results.edit')->with('data', $data);
+    }
+    public function update(Request $request, $id){
+        $this->validate($request, [
+            'exam_no' => 'required',
+            'mathematics' => 'required',
+            'reasoning' => 'required',
+            'english' => 'required',
+            'vreasoning' => 'required',
+            'general' => 'required',
+            'totalscore' => 'required',
+            'cummulative' => 'required',
+            'remarks' => 'required',
+        ]);
+
+        $data = Result::find($id);
+        $data->exam_no = $request->exam_no;
+        $data->mathematics = $request->mathematics;
+        $data->reasoning = $request->reasoning;
+        $data->english = $request->english;
+        $data->vreasoning = $request->vreasoning;
+        $data->general = $request->general;
+        $data->totalscore = $request->totalscore;
+        $data->cummulative= $request->cummulative;
+        $data->remarks = $request->remarks;
+        $data->save();
+
+        return redirect('/result')->with('success', 'Result updated successfully.');   
+
+    }
+    public function delete($id){
+        $data = Result::find($id);
+        $data->delete();
+        Session::flash('success', 'Result was deleted successfully!');
+        return redirect()->back();
     }
 }
