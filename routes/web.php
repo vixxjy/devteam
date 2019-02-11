@@ -18,6 +18,8 @@ Route::get('/admission', [ 'uses' => 'PagesController@admission', 'as' => 'admis
 Route::get('/contact', [ 'uses' => 'PagesController@contact', 'as' => 'contact']);
 Route::get('/gallery', [ 'uses' => 'PagesController@gallery', 'as' => 'gallery']);
 Route::get('/news', [ 'uses' => 'PagesController@news', 'as' => 'news']);
+Route::get('/history', [ 'uses' => 'PagesController@history', 'as' => 'history']);
+Route::get('/downloads', [ 'uses' => 'PagesController@downloads', 'as' => 'downloads']);
 
 Route::get('/dashboard', [ 'uses' => 'dashboardController@dashboard', 'as' => 'dashboard']);
 
@@ -77,3 +79,5 @@ Route::post('/result/store',[ 'uses' => 'ResultController@store', 'as' => 'Resul
 // pdf routes
 Route::get('/pdf/list',[ 'uses' => 'PdfController@index', 'as' => 'pdf']);
 Route::post('/pdf/add',[ 'uses' => 'PdfController@upload', 'as' => 'pdf.add']);
+Route::get('pdf/{uuid}/download', 'PdfController@download')->name('pdf.download');
+Route::get( '/pdf/delete/{id}', ['uses' => 'PdfController@delete', 'as' => 'pdf.delete']);

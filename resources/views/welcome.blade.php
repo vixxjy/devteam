@@ -94,7 +94,7 @@
                         <li><a href="/admission">admission</a></li>
                         <li><a href="/academics">academics</a></li>
                         <!--<li><a href="#">prayer & liturgy</a></li>-->
-                        <!--<li><a href="news.html">news</a></li>-->
+                        <li><a href="/downloads">Downloads</a></li>
                         <li><a href="/results">Results</a></li>
                         <li><a href="/contact">contact us</a></li>
                     </ul>
@@ -183,13 +183,13 @@
                     <span>APPLICATION</span>
                     </div>
                 </a>
-                <a href="#">
+                <a href="/results">
                     <div class="uk-card">
                     <img src="{{ secure_asset('frontend/img/calender.png')}}" alt="calender">
                     <span>RESULTS</span>
                     </div>
                 </a>
-                <a href="#">
+                <a href="/history">
                     <div class="uk-card">
                     <img src="{{ secure_asset('frontend/img/history.png')}}" alt="history">
                     <span>HISTORY</span>

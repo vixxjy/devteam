@@ -72,9 +72,44 @@
                                 </form>
                             </div>
                             
-                            <hr>
+                                                 <hr>
                             <!--tables-->
-
+                            <div class="row">
+                                <div class="col-md-12">
+                                   <table class="table table-bordered table-striped table-condensed" id="table" >
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">#</th>
+                                                <th class="text-center">Title</th>
+                                                <th class="text-center">Pdf File</th>
+                                                <th class="text-center">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                           @foreach($pdfs as $pdf)
+                                     
+                                            <tr class="">
+                                                <td>{{$pdf->id}}</td>
+                                                <td>{{ $pdf->title}}</td>
+                                                <!--<td><a href="{{secure_asset('pdf/'.$pdf->upload_file)}}" download>{{$pdf->upload_file }}</a></td>-->
+                                                <td><a href="{{ route('pdf.download', $pdf->uuid) }}">{{$pdf->upload_file }}</a></td>
+                                                <td>
+                                                    <!--<a href=""><button id="edit-modal" class="edit-modal btn btn-info">-->
+                                                    <!--    <span class="glyphicon glyphicon-edit"></span> Edit-->
+                                                    <!--</button></a>-->
+                                                    <a href="{{ route('pdf.delete', $pdf->id) }}" onclick="return confirm('Do you really want to delete This?')">
+                                                    <button class="delete-modal btn btn-danger">
+                                                        <span class="glyphicon glyphicon-trash"></span> Delete
+                                                    </button>
+                                                    </a>
+                                                   
+                                                </td>
+                                            </tr>
+                                          @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                             <!--end table-->
                         </div>
                     </div>

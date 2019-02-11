@@ -17,6 +17,7 @@ class CreatePdfsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('upload_file');
+            $table->uuid('uuid')->nullable();
             $table->timestamps();
         });
     }

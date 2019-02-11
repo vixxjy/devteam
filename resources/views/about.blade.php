@@ -14,11 +14,11 @@
                             Saint Augustine of Hippo, a genius whose contemplative life shed enlightenment upon the
                             entire Catholic faith and gives great meaning and value to education today. Here at St.
                             Augustine’s College Du, we seek to develop the mind and heart in line with our core
-                            values of: <span class="font-600 uk-display-block uk-margin-top">UNITAS</span> Community, unity &
+                            values of: <span class="font-600 uk-display-block uk-margin-top"><em>UNITAS</em></span> Community, unity &
                             sharing of common
                             life,
-                            <span class="font-600 uk-display-block uk-margin-top">VERITAS</span>
-                            Truth, honesty, integrity, and self -discipline  and <span class="font-600 uk-display-block uk-margin-top">CARITAS</span>  love of God and neighbour.</p>
+                            <span class="font-600 uk-display-block uk-margin-top"><em>VERITAS</em></span>
+                            Truth, honesty, integrity, and self -discipline  and <span class="font-600 uk-display-block uk-margin-top"><em>CARITAS</em></span>  love of God and neighbour.</p>
                     </div>
                 </div>
                 <div uk-grid>
