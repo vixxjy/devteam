@@ -116,7 +116,7 @@
                                         <tbody>
                                            @foreach($events as $event)
                                             <tr class="">
-                                                <td>{{$loop->index}}</td>
+                                                <td>{{$loop->index +1}}</td>
                                                 <td>{{ $event->title}}</td>
                                                 <td>{{ str_limit($event->description,50) }}</td>
                                                 <td><img class="img-responsive" style="max-height: 100px; width: 100px;" src="{{url('images/'.$event->image)}}" alt=""></td>

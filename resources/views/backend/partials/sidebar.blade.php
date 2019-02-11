@@ -50,7 +50,7 @@
                 <!--    </a>-->
                 <!--</li>-->
                 <li>
-                    <a href="#">
+                    <a href="/video/add">
                         <i class="ti-video-camera"></i>
                         <p>Youtube Video</p>
                     </a>

@@ -83,3 +83,9 @@ Route::get('/result/delete/{id}',[ 'uses' => 'ResultController@delete', 'as' => 
 // pdf routes
 Route::get('/pdf/list',[ 'uses' => 'PdfController@index', 'as' => 'pdf']);
 Route::post('/pdf/add',[ 'uses' => 'PdfController@upload', 'as' => 'pdf.add']);
+
+Route::get('/video/add', ['uses' => 'YoutubeController@index', 'as' => 'video.add']);
+Route::post('/video/add', ['uses' => 'YoutubeController@store', 'as' => 'video.store']);
+Route::get('/video/edit/{id}', ['uses' => 'YoutubeController@edit', 'as' => 'edit.video']);
+Route::post('/video/update/{id}', ['uses' => 'YoutubeController@update', 'as' => 'update.video']);
+Route::get('/video/delete/{id}', ['uses' => 'YoutubeController@delete', 'as' => 'delete.video']);
