@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-Use App\Event;
+use App\Event;
+use App\Pdf;
 
 class PagesController extends Controller
 {
@@ -29,6 +30,15 @@ class PagesController extends Controller
     }
     public function moreEvent(){
         return view('more-event');
+    }
+    
+    public function history() {
+        return view('history');
+    }
+    
+    public function downloads(){
+        $pdfs = Pdf::orderBy('id', 'DESC')->get();
+        return view('downloads', ['pdfs' => $pdfs]);
     }
     
     public function news($id){

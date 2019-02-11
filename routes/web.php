@@ -18,6 +18,8 @@ Route::get('/admission', [ 'uses' => 'PagesController@admission', 'as' => 'admis
 Route::get('/contact', [ 'uses' => 'PagesController@contact', 'as' => 'contact']);
 Route::get('/gallery', [ 'uses' => 'PagesController@gallery', 'as' => 'gallery']);
 Route::get('/news', [ 'uses' => 'PagesController@news', 'as' => 'news']);
+Route::get('/history', [ 'uses' => 'PagesController@history', 'as' => 'history']);
+Route::get('/downloads', [ 'uses' => 'PagesController@downloads', 'as' => 'downloads']);
 
 Route::get('/dashboard', [ 'uses' => 'dashboardController@dashboard', 'as' => 'dashboard']);
 
@@ -83,9 +85,14 @@ Route::get('/result/delete/{id}',[ 'uses' => 'ResultController@delete', 'as' => 
 // pdf routes
 Route::get('/pdf/list',[ 'uses' => 'PdfController@index', 'as' => 'pdf']);
 Route::post('/pdf/add',[ 'uses' => 'PdfController@upload', 'as' => 'pdf.add']);
+<<<<<<< HEAD
 
 Route::get('/video/add', ['uses' => 'YoutubeController@index', 'as' => 'video.add']);
 Route::post('/video/add', ['uses' => 'YoutubeController@store', 'as' => 'video.store']);
 Route::get('/video/edit/{id}', ['uses' => 'YoutubeController@edit', 'as' => 'edit.video']);
 Route::post('/video/update/{id}', ['uses' => 'YoutubeController@update', 'as' => 'update.video']);
 Route::get('/video/delete/{id}', ['uses' => 'YoutubeController@delete', 'as' => 'delete.video']);
+=======
+Route::get('pdf/{uuid}/download', 'PdfController@download')->name('pdf.download');
+Route::get( '/pdf/delete/{id}', ['uses' => 'PdfController@delete', 'as' => 'pdf.delete']);
+>>>>>>> e5bdee895dcfaed5f7f837821f6a3c4c0b685d40
