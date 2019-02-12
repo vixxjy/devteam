@@ -267,19 +267,34 @@
                         @endforeach
                     </div>
                 </div>
+                @if($youtubes->count() > 0)
+                
+                        @foreach($youtubes as $youtube)
+                            @if ($loop->first)
+                        <div class="vid-card uk-width-2-3@m uk-padding-remove">
+                            <a class="uk-margin-bottom" uk-toggle="target: .hideme; animation: uk-animation-fade; queued: true; duration: 300">
+                                <img class="uk-width-1-1@m hideme" src="{{ secure_asset('frontend/img/whyUs.png')}}" alt="">
+                            </a>
+                        
+                            <iframe class="hideme"
+                                    src="{{ $youtube->url }}" width="100%" height="100%" frameborder="0" allowfullscreen uk-responsive uk-video="automute: true" hidden></iframe>
+                        </div>
+                            @endif
+                        @endforeach
+                
+                @else
+                    
+                      <div class="vid-card uk-width-2-3@m uk-padding-remove">
+                            <a class="uk-margin-bottom" uk-toggle="target: .hideme; animation: uk-animation-fade; queued: true; duration: 300">
+                                <img class="uk-width-1-1@m hideme" src="{{ secure_asset('frontend/img/whyUs.png')}}" alt="">
+                            </a>
+                        
+                            <iframe class="hideme"
+                                    src="#" width="100%" height="100%" frameborder="0" allowfullscreen uk-responsive uk-video="automute: true" hidden></iframe>
+                        </div>
+                
+                @endif
                
-                <div class="vid-card uk-width-2-3@m uk-padding-remove">
-                    <a class="uk-margin-bottom" uk-toggle="target: .hideme; animation: uk-animation-fade; queued: true; duration: 300">
-                        <img class="uk-width-1-1@m hideme" src="{{ secure_asset('frontend/img/whyUs.png')}}" alt="">
-                    </a>
-                @foreach($youtubes as $youtube)
-                    @if ($loop->first)
-                    <iframe class="hideme"
-                            src="{{ $youtube->url }}" width="100%" height="100%" frameborder="0" allowfullscreen uk-responsive uk-video="automute: true" hidden></iframe>
-                    @endif
-                @endforeach
-                </div>
-     
             </div>
           <div class="n&e-updates container">
                 <h2 class="uk-child-width-1-1@s uk-text-center uk-text-bold col-black news">NEWS AND EVENT UPDATES</h2>
