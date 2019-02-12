@@ -55,12 +55,12 @@
                         <p>Youtube Video</p>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="ti-image"></i>
-                        <p>Gallery</p>
-                    </a>
-                </li>
+                <!--<li>-->
+                <!--    <a href="#">-->
+                <!--        <i class="ti-image"></i>-->
+                <!--        <p>Gallery</p>-->
+                <!--    </a>-->
+                <!--</li>-->
                  <li>
                     <a href="/pdf/list">
                         <i class="ti-upload"></i>

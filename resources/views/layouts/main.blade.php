@@ -16,11 +16,11 @@
                 <ul class="uk-navbar-nav">
                     <li>
                         <a href="#"><span class="mr-4px"
-                                          uk-icon="icon: receiver; ratio: .8"></span>+98 558 547 580</a>
+                                          uk-icon="icon: receiver; ratio: .8"></span>+234(0)7037889862, +234(0)7032665212</a>
                     </li>
                     <li>
                         <a href="#"><span class="mr-4px"
-                                          uk-icon="icon: mail; ratio: .8"></span>education@info.com</a>
+                                          uk-icon="icon: mail; ratio: .8"></span>st.augustinescollegedu@gmail.com</a>
                     </li>
                 </ul>
 

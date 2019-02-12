@@ -146,53 +146,58 @@
                 <!--        </div>-->
                 <!--    </div>-->
                 <!--</div>-->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Application Statistics</h4>
-                                <p class="category">Online Application Performance</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
-
-                                <div class="footer">
-                                    <div class="chart-legend">
-                                        <i class="fa fa-circle text-info"></i> Open
-                                        <i class="fa fa-circle text-danger"></i> Bounce
-                                        <i class="fa fa-circle text-warning"></i> Unsubscribe
-                                    </div>
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="ti-timer"></i> Campaign sent 2 days ago
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card ">
-                            <div class="header">
-                                <h4 class="title">Our Growth</h4>
-                                <p class="category">All events and news</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartActivity" class="ct-chart"></div>
-
-                                <div class="footer">
-                                    <div class="chart-legend">
-                                        <i class="fa fa-circle text-info"></i> students
-                                        <i class="fa fa-circle text-warning"></i> staff
-                                    </div>
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="ti-check"></i> Data information certified
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row" >
+                    <div class="col-md-6">{!! $chart->html() !!}</div>
+                    <div class="col-md-6">{!! $charts->html() !!}</div>
                 </div>
+                <!--<div class="row">-->
+                <!--    <div class="col-md-6">-->
+                <!--        <div class="card">-->
+                <!--            <div class="header">-->
+                <!--                <h4 class="title">Application Statistics</h4>-->
+                <!--                <p class="category">Online Application Performance</p>-->
+                <!--            </div>-->
+                <!--            <div class="content">-->
+                                <!--<div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>-->
+                               
+
+                <!--                <div class="footer">-->
+                <!--                    <div class="chart-legend">-->
+                <!--                        <i class="fa fa-circle text-info"></i> Open-->
+                <!--                        <i class="fa fa-circle text-danger"></i> Bounce-->
+                <!--                        <i class="fa fa-circle text-warning"></i> Unsubscribe-->
+                <!--                    </div>-->
+                <!--                    <hr>-->
+                <!--                    <div class="stats">-->
+                <!--                        <i class="ti-timer"></i> Campaign sent 2 days ago-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--            </div>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--    <div class="col-md-6">-->
+                <!--        <div class="card ">-->
+                <!--            <div class="header">-->
+                <!--                <h4 class="title">Our Growth</h4>-->
+                <!--                <p class="category">All events and news</p>-->
+                <!--            </div>-->
+                <!--            <div class="content">-->
+                <!--                <div id="chartActivity" class="ct-chart"></div>-->
+
+                <!--                <div class="footer">-->
+                <!--                    <div class="chart-legend">-->
+                <!--                        <i class="fa fa-circle text-info"></i> students-->
+                <!--                        <i class="fa fa-circle text-warning"></i> staff-->
+                <!--                    </div>-->
+                <!--                    <hr>-->
+                <!--                    <div class="stats">-->
+                <!--                        <i class="ti-check"></i> Data information certified-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--            </div>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--</div>-->
             </div>
         </div>
 
@@ -201,6 +206,9 @@
     </div>
 </div>
 
+{!! Charts::scripts() !!}
+{!! $chart->script() !!}
+{!! $charts->script() !!}
 @endsection
 @section('script')
 

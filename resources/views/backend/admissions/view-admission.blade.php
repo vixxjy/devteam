@@ -56,6 +56,11 @@
                             </tbody>
                         </table>
                         </div>
+                         <div class="text-center">
+                                        <a href="/dashboard" class="btn btn-info btn-fill btn-wd">Cancel</a>
+                                        <!--<button type="submit" class="btn btn-info btn-fill btn-wd">Add Results</button>-->
+                                    </div>
+                                    <div class="clearfix"></div>
                     </div>
 
 

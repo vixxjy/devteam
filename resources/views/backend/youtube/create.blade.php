@@ -47,7 +47,7 @@
                                 <form action="{{ route('video.store')}}" method="post" enctype="multipart/form-data">
                                     {{csrf_field()}}
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <div class="col-md-8">
                                             <div class="form-group">
                                                 <label for="title">Video URL:<span class="text-danger">*</span></label>
                                                 <input autofocus type="text" class="form-control border-input" name="url" placeholder="URL" value="{{ old('') }}" required>
@@ -68,7 +68,7 @@
                              <!--tables-->
                                <!--tables-->
                             <div class="row">
-                                <div class="col-md-7 offset-md-3">
+                                <div class="col-md-12">
                                    <table class="table table-bordered table-striped table-condensed" id="table" >
                                         <thead>
                                             <tr>
