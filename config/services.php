@@ -19,6 +19,10 @@ return [
         'secret' => env('MAILGUN_SECRET'),
         'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
     ],
+    
+    'sendgrid' => [
+        'api_key' => env('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'),
+    ],
 
     'ses' => [
         'key' => env('SES_KEY'),

@@ -55,7 +55,14 @@
                     <ul class="uk-navbar-nav">
                         <li><a href="#" class="uk-flex-wrap">
                             <span class="name">St. Augustines College
-                            Du<span class="sub-title"><br>amina discendo Crescit</span></span>
+                            Du,<br> Jos-South
+                            <span class="sub-title"><br>amina discendo Crescit<br>
+                                <span class="meaning">(The Soul
+                                    grows by
+                                    learning)
+                                </span>
+                            </span>
+                        </span>
                             </a></li>
                     </ul>
 

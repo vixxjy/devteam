@@ -129,6 +129,7 @@ class ThoughttermController extends Controller
      */
     public function destroy($id)
     {
+      
         $thoughtterm = Thoughtterm::find($id);
 
         $thoughtterm->delete();

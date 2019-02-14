@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Admission;
 use Session; 
+use App\Mail\ApplicationEmail;
+
+
 class AdmissionController extends Controller
 {
     //
@@ -40,7 +43,20 @@ class AdmissionController extends Controller
         $app->state = $request->input('state');
         $app->address = $request->input('address');
         $app->save();
-        return redirect()->back()->with('success', 'Message Sent Succesfully.');
+        
+        //sending mail
+        // $data = ['message' => 'Thanks for your application'];
+        
+        // $mail_content = [
+        //     'name'          => $request->input('name'),
+        //     'content'       => $request->input('message'),
+        //     'company_name'  => $request->input('company_name'),
+        //     'product_name'  => $request->input('product_name'),
+        // ];
+
+        // \Mail::to('ajorvictor48@gmail.com')->send(new ApplicationEmail($data));
+        
+        return redirect()->back()->with('success', 'Your Application was Sent Succesfully.');
   
     }
 

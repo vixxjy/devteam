@@ -28,7 +28,7 @@
                         <li>Must have passed the school’s entrance examination with a minimum of 50%.</li>
                     </ul>
                     </div>
-                <h3>Please <a class="uk-link font-600" href="contact.html">contact us</a> if you have any questions
+                <h3>Please <a class="uk-link font-600" href="/contact">contact us</a> if you have any questions
                     about being
                     part
                     of us.</h3>
