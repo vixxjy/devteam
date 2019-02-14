@@ -20,6 +20,7 @@ Route::get('/gallery', [ 'uses' => 'PagesController@gallery', 'as' => 'gallery']
 Route::get('/news', [ 'uses' => 'PagesController@news', 'as' => 'news']);
 Route::get('/history', [ 'uses' => 'PagesController@history', 'as' => 'history']);
 Route::get('/downloads', [ 'uses' => 'PagesController@downloads', 'as' => 'downloads']);
+Route::get('/results',[ 'uses' => 'ResultController@index', 'as' => 'Results']);
 
 
 Route::get('/signin', [ 'uses' => 'AuthController@login', 'as' => 'login']);
@@ -77,7 +78,6 @@ Route::group(['middleware'=>'web', 'middleware' => 'auth'],function (){
     Route::get( '/Thoughtofterm/delete/{id}', ['uses' => 'ThoughttermController@destroy', 'as' => 'thoughtterm.delete']);
     
     // online Results
-    Route::get('/results',[ 'uses' => 'ResultController@index', 'as' => 'Results']);
     Route::get('/result',[ 'uses' => 'ResultController@create', 'as' => 'Result.add']);
     Route::post('/result/store',[ 'uses' => 'ResultController@store', 'as' => 'Result.store']);
     Route::get('/result/edit/{id}',[ 'uses' => 'ResultController@edit', 'as' => 'Result.edit']);

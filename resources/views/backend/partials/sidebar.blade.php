@@ -43,12 +43,8 @@
                         <p>News/Events</p>
                     </a>
                 </li>
-                <!--<li>-->
-                <!--    <a href="/message">-->
-                <!--        <i class="ti-pencil-alt2"></i>-->
-                <!--        <p>Messages</p>-->
-                <!--    </a>-->
-                <!--</li>-->
+        
+                 @if(Auth::user()->role == 'Admin')
                 <li>
                     <a href="/video/add">
                         <i class="ti-video-camera"></i>
@@ -73,6 +69,7 @@
                         <p>Users</p>
                     </a>
                 </li>
+                @endif
             </ul>
     	</div>
     </div>
