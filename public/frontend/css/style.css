@@ -6680,7 +6680,7 @@ a.uk-slidenav-next.uk-icon.uk-slidenav {
 .news {
   position: relative; }
   .news:before {
-    content: '';
+    content: none;
     position: absolute;
     bottom: -30px;
     height: 20px;
@@ -6700,7 +6700,8 @@ iframe {
   object-fit: cover;
   border-radius: 25px;
   margin: 20px;
-  box-shadow: 0px 0px 15px; }
+  box-shadow: 0px 0px 15px;
+  margin-bottom: 30px!important; }
 
 .wrapper {
   box-shadow: 0px 0px 15px;
@@ -6828,4 +6829,11 @@ html {
   .uk-navbar-toggle {
     display: flex; } }
 
+.scroller a{
+  color: #ffffff!important;
+}
+
+.sider{
+  padding-bottom: 50px
+}
 /*# sourceMappingURL=style.css.map */

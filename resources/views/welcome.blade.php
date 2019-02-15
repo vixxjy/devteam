@@ -274,7 +274,7 @@
                                 teachers and students to use their best abilities and achieve the best values possible.</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="sider">
                         <img class="side" src="{{ secure_asset('frontend/img/side.jpg')}}" alt="">
                     </div>
                 </div>

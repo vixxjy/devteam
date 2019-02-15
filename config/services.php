@@ -21,7 +21,7 @@ return [
     ],
     
     'sendgrid' => [
-        'api_key' => env('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'),
+        'api_key' => env('er'),
     ],
 
     'ses' => [
