@@ -54,11 +54,12 @@
                     <a class="uk-navbar-item uk-logo" href="#"><img src="{{ secure_asset('frontend/img/logo.png')}}" alt=""></a>
                     <ul class="uk-navbar-nav">
                         <li><a href="#" class="uk-flex-wrap"> 
-                        <span class="name">ST. AUGUSTINE'S COLLEGE<br><span class="smalltext">Du, Jos-South</span>
-                            <span class="sub-title"><br>amina discendo Crescit<br>
+                        <span class="name">ST. AUGUSTINE'S COLLEGE<br><span class="sub-title smalltext">Du, Jos-South</span>
+                            <span class="sub-title italic"><br><br>
+                            amina discendo Crescit<br>
                                 <span class="meaning">(The Soul
                                     grows by
-                                    learning)
+                                    learning)<br>
                                 </span>
                             </span>
                         </span>
@@ -257,9 +258,12 @@
                             <p class="uk-margin-remove uk-text-left">Our Facilitators are well qualified with the best teaching method and work with best teaching practices. </p>
                         </div>
                         <div>
+                            <a href="/downloads">
                             <img src="{{ secure_asset('frontend/img/labs.png')}}" width="70" alt="">
+                            </a>
                             <h5 class="uk-text-bold uk-text-left uk-margin-small-top">ASSIGNMENT/SCHEME</h5>
                             <p class="uk-margin-remove uk-text-left">At St. Augustine’s College Du, we provide excellent assignment scheme for the academic growth our students</p>
+                            
                         </div>
                         <div>
                             <img src="{{ secure_asset('frontend/img/env.png')}}" width="70" alt="">

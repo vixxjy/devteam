@@ -6568,7 +6568,7 @@ iframe.uk-cover {
 
 .uk-navbar-nav > li > a .name {
   text-transform: none;
-  line-height: .9;
+  line-height: .7;
   color: #1d034d;
   font-size: 2rem;
   font-weight: 600;
@@ -6579,7 +6579,9 @@ iframe.uk-cover {
   font-size: 1rem;
   font-weight: 600;
   font-family: "OpenSans", sans-serif; }
-
+.italic{
+  font-style: italic;
+}
 .uk-navbar-toggle {
   display: none;
   position: absolute;
@@ -6834,6 +6836,6 @@ html {
 }
 
 span.smalltext{
-  font-size: 1.4rem
+  font-size: 1rem
 }
 /*# sourceMappingURL=style.css.map */

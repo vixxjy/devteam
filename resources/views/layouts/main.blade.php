@@ -5,9 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ secure_asset('frontend/css/style.css')}}">
+    <!-- <link rel="stylesheet" href="{{ secure_asset('frontend/css/style.css')}}"> -->
+    <link rel="stylesheet" href="/frontend/css/style.css">
     <title>St Augustines College DU</title>
-     @yield('style')
 </head>
 <body>
 <div class="wrapper uk-container uk-container-large">
@@ -42,7 +42,7 @@
                     <li>
                         <a href="#" uk-icon="icon: rss; ratio: .8"></a>
                     </li>
-                   <li>
+                  <li>
                         <a href="/signin">Login</a>
                     </li>
                 </ul>
@@ -53,17 +53,32 @@
                 <div class="uk-navbar-left">
                     <a class="uk-navbar-item uk-logo" href="#"><img src="{{ secure_asset('frontend/img/logo.png')}}" alt=""></a>
                     <ul class="uk-navbar-nav">
-                        <li><a href="#" class="uk-flex-wrap">
-                            <span class="name">St. Augustines College
-                            Du,<br> Jos-South
-                            <span class="sub-title"><br>amina discendo Crescit<br>
+                        <li><a href="#" class="uk-flex-wrap"> 
+                        <span class="name">ST. AUGUSTINE'S COLLEGE<br><span class="sub-title smalltext">Du, Jos-South</span>
+                            <span class="sub-title italic"><br><br>
+                            amina discendo Crescit<br>
                                 <span class="meaning">(The Soul
                                     grows by
-                                    learning)
+                                    learning)<br>
                                 </span>
                             </span>
                         </span>
-                            </a></li>
+                            </a>
+                        <span>
+                                @if($errors->any())
+                                    <div class="uk-alert-danger">
+                                    @foreach($errors->all() as $error)
+                                        <p>{{ $error }}</p>
+                                    @endforeach()
+                                    </div>
+                                @endif
+                                    @if ($message = Session::get('success'))
+                                    <div class="uk-alert-success">
+                                        <p><b>{{ $message }}</b></p>
+                                   </div>
+                                @endif
+                        </span>
+                        </li>
                     </ul>
 
                 </div>
@@ -71,7 +86,7 @@
 
                     <ul class="uk-navbar-nav nav1">
                         <li>
-                            <a class="uk-text-center uk-flex-wrap" href="/admission">
+                            <a class="uk-text-center uk-flex-wrap" href="#modal-center-admission" uk-toggle>
                                 <img src="{{ secure_asset('frontend/img/admissions.png')}}" alt="" class="nav-img">
                                 <span class="uk-width-1-1@s">Application</span>
                             </a>
