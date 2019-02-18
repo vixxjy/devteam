@@ -56,7 +56,7 @@
                         <li><a href="#" class="uk-flex-wrap"> 
                         <span class="name">ST. AUGUSTINE'S COLLEGE<br><span class="sub-title smalltext">Du, Jos-South</span>
                             <span class="sub-title italic"><br><br>
-                            amina discendo Crescit<br>
+                            <span class="meaning smalltext">Anima Discendo Crescit</span><br>
                                 <span class="meaning">(The Soul
                                     grows by
                                     learning)<br>
