@@ -66,14 +66,14 @@
                             </a>
                         <span>
                                 @if($errors->any())
-                                    <div class="uk-alert-danger">
+                                    <div class="">
                                     @foreach($errors->all() as $error)
                                         <p>{{ $error }}</p>
                                     @endforeach()
                                     </div>
                                 @endif
                                     @if ($message = Session::get('success'))
-                                    <div class="uk-alert-success">
+                                    <div class="">
                                         <p><b>{{ $message }}</b></p>
                                    </div>
                                 @endif

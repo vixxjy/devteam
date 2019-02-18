@@ -46,6 +46,7 @@ class AuthController extends Controller
         ]);
         
          $data = $request->all();
+         $data['password'] = bcrypt($request->password);
          
          User::create($data);
         return redirect()->back()->with('success', 'User added Successfully');
