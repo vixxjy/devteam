@@ -6586,11 +6586,11 @@ iframe.uk-cover {
   z-index: 123456;
   right: 0;
   height: 90px; }
-
+  
 .meaning {
   color: #5173ff;
   font-style: italic;
-  font-size: .8rem; }
+  font-size: .6rem; }
 
 .uk-slideshow-items {
   min-height: calc((100vh) - 170px) !important; }
@@ -6718,7 +6718,7 @@ iframe {
 
 .scroller {
   width: 100%;
-  height: 80px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6833,7 +6833,7 @@ html {
   color: #ffffff!important;
 }
 
-.sider{
-  padding-bottom: 50px
+span.smalltext{
+  font-size: 1.4rem
 }
 /*# sourceMappingURL=style.css.map */

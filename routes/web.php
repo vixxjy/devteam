@@ -21,6 +21,7 @@ Route::get('/news', [ 'uses' => 'PagesController@news', 'as' => 'news']);
 Route::get('/history', [ 'uses' => 'PagesController@history', 'as' => 'history']);
 Route::get('/downloads', [ 'uses' => 'PagesController@downloads', 'as' => 'downloads']);
 Route::get('/results',[ 'uses' => 'ResultController@index', 'as' => 'Results']);
+Route::get('pdf/{uuid}/download', 'PdfController@download')->name('pdf.download');
 
 
 Route::get('/signin', [ 'uses' => 'AuthController@login', 'as' => 'login']);
@@ -94,7 +95,6 @@ Route::group(['middleware'=>'web', 'middleware' => 'auth'],function (){
     Route::post('/video/update/{id}', ['uses' => 'YoutubeController@update', 'as' => 'update.video']);
     Route::get('/video/delete/{id}', ['uses' => 'YoutubeController@delete', 'as' => 'delete.video']);
     
-    Route::get('pdf/{uuid}/download', 'PdfController@download')->name('pdf.download');
     Route::get( '/pdf/delete/{id}', ['uses' => 'PdfController@delete', 'as' => 'pdf.delete']);
 });
 

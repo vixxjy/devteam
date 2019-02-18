@@ -54,8 +54,7 @@
                     <a class="uk-navbar-item uk-logo" href="#"><img src="{{ secure_asset('frontend/img/logo.png')}}" alt=""></a>
                     <ul class="uk-navbar-nav">
                         <li><a href="#" class="uk-flex-wrap"> 
-                        <span class="name">St. Augustines College
-                            Du,<br> Jos-South
+                        <span class="name">ST. AUGUSTINE'S COLLEGE<br><span class="smalltext">Du, Jos-South</span>
                             <span class="sub-title"><br>amina discendo Crescit<br>
                                 <span class="meaning">(The Soul
                                     grows by
@@ -125,18 +124,6 @@
                 </div>
                 <a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #offcanvas-flip" href="#"></a>
             </nav>
-        </div>
-        <div class="scroller">
-        @if ($events->count() > 0)
-              @foreach($events as $event)
-                 @if ($loop->first)
-            <marquee behavior="" direction="" width="50%"><a href="{{ route('more-event', $event->id) }}">{{$event->title}} | {{str_limit($event->description, 50)}} | {{ date('F d, Y', strtotime($event->created_at)) }}</a></marquee>
-                 @endif
-              @endforeach
-             
-        @else
-             <marquee behavior="" direction="" width="50%"><a href="#">Welcome To St. Augustines College Du. We Believe in Excellence</a></marquee>
-        @endif
         </div>
     <header class="uk-overflow-hidden">
         <div class="uk-position-relative" uk-slideshow="animation: fade; autoplay: true">
@@ -209,6 +196,18 @@
 
         </div>
     </header>
+    <div class="scroller">
+        @if ($events->count() > 0)
+              @foreach($events as $event)
+                 @if ($loop->first)
+            <marquee behavior="" direction="" width="50%"><a href="{{ route('more-event', $event->id) }}">{{$event->title}} | {{str_limit($event->description, 50)}} | {{ date('F d, Y', strtotime($event->created_at)) }}</a></marquee>
+                 @endif
+              @endforeach
+             
+        @else
+             <marquee behavior="" direction="" width="50%"><a href="#">Welcome To St. Augustines College Du. We Believe in Excellence</a></marquee>
+        @endif
+    </div>
     <main class="body">
         <div class="uk-container uk-container-small">
             <div class="uk-child-width-1-5@m cards uk-grid-small" uk-grid>
@@ -251,26 +250,26 @@
                 <h2 class="col-black uk-text-bold uk-margin-remove">WE STAND FOR:</h2>
                 <p class="uk-width-2-3@m margin-center uk-margin-top">Academic Excellence and Character Formation. Here, Education is a formation process, geared at creating young men and women of deep faith, critical sense of reasoning, as well as sound moral values.</p>
                 <div class="uk-child-width-1-2@m" uk-grid>
-                    <div class="uk-padding uk-child-width-1-2@m uk-text-left bests" uk-grid>
+                    <div class="uk-padding uk-text-center uk-child-width-1-2@m uk-text-left bests" uk-grid>
                         <div>
-                            <img src="img/best-teach.png" width="70" alt="">
-                            <h5 class="uk-text-bold uk-margin-small-top">BEST TEACHERS</h5>
-                            <p class="uk-margin-remove">Our Facilitators are well qualified with the best teaching method and work with best teaching practices. </p>
+                            <img src="{{ secure_asset('frontend/img/best-teach.png')}}" width="70" alt="">
+                            <h5 class="uk-text-bold uk-text-left uk-margin-small-top">BEST TEACHERS</h5>
+                            <p class="uk-margin-remove uk-text-left">Our Facilitators are well qualified with the best teaching method and work with best teaching practices. </p>
                         </div>
                         <div>
-                            <img src="img/labs.png" width="70" alt="">
-                            <h5 class="uk-text-bold uk-margin-small-top">ASSIGNMENT/SCHEME</h5>
-                            <p class="uk-margin-remove">At St. Augustine’s College Du, we provide excellent assignment scheme for the academic growth our students</p>
+                            <img src="{{ secure_asset('frontend/img/labs.png')}}" width="70" alt="">
+                            <h5 class="uk-text-bold uk-text-left uk-margin-small-top">ASSIGNMENT/SCHEME</h5>
+                            <p class="uk-margin-remove uk-text-left">At St. Augustine’s College Du, we provide excellent assignment scheme for the academic growth our students</p>
                         </div>
                         <div>
-                            <img src="img/env.png" width="70" alt="">
-                            <h5 class="uk-text-bold uk-margin-small-top">SERENE ENVIRONMENTS</h5>
-                            <p class="uk-margin-remove">St. Augustine’s College Du is impressive in vision and architectural design; located in a safe and serene environment to enhance studies and intellectual development</p>
+                            <img src="{{ secure_asset('frontend/img/env.png')}}" width="70" alt="">
+                            <h5 class="uk-text-bold uk-text-left uk-margin-small-top">SERENE ENVIRONMENTS</h5>
+                            <p class="uk-margin-remove uk-text-left">St. Augustine’s College Du is impressive in vision and architectural design; located in a safe and serene environment to enhance studies and intellectual development</p>
                         </div>
                         <div>
-                            <img src="img/security.png " width="70" alt="">
-                            <h5 class="uk-text-bold uk-margin-small-top">FACILITIES</h5>
-                            <p class="uk-margin-remove">Our facilities are of best standards, motivating both
+                            <img src="{{ secure_asset('frontend/img/security.png')}}" width="70" alt="">
+                            <h5 class="uk-text-bold uk-text-left uk-margin-small-top">OUR FACILITIES</h5>
+                            <p class="uk-margin-remove uk-text-left">Our facilities are of best standards, motivating both
                                 teachers and students to use their best abilities and achieve the best values possible.</p>
                         </div>
                     </div>
