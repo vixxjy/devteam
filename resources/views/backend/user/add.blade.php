@@ -74,8 +74,8 @@
                                             <div class="form-group">
                                                 <label for="title">Role<span class="text-danger">*</span></label>
                                                  <select name="role" class="form-control" >
-                                                    <option value="admin">Admin</option>
-                                                    <option value="agent">Editor</option>
+                                                    <option value="Admin">Admin</option>
+                                                    <option value="Editor">Editor</option>
                                                   
                                                 </select> 
                                                 <span class="text-danger">{{ $errors->first('role') }}</span>

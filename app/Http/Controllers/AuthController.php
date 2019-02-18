@@ -67,7 +67,7 @@ class AuthController extends Controller
         $data->username = $request->username;
         $data->email = $request->email;
         $data->role = $request->role;
-        $data->password = $request->password;
+        $data->password = bcrypt($request->password);
         $data->save();
         return redirect('/user/add')->with('success', 'User updated Successfully');
     }
